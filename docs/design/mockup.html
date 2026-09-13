@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunflower Guard — One Door</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    padding: 48px 32px 72px;
+    background: #14140F;
+    color: #E9E4DA;
+    font-family: 'Archivo', system-ui, sans-serif;
+  }
+  .head { max-width: 760px; margin: 0 auto 44px; }
+  .head h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }
+  .head p { font-size: 16px; line-height: 1.65; color: #9A958B; margin: 0 0 10px; max-width: 68ch; text-wrap: pretty; }
+  .row { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start; }
+  .item { display: flex; flex-direction: column; gap: 14px; }
+  .label { font-size: 13px; letter-spacing: 0.1em; color: #6E6A61; text-transform: uppercase; }
+  .phone {
+    position: relative; width: 390px; height: 844px;
+    display: flex; flex-direction: column;
+    padding: 56px 28px 34px; box-sizing: border-box;
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  }
+  .dawn { background: #E7D2A8; color: #2B2010; }
+  .dusk { background: #1B1F2D; color: #EDE7D9; }
+  .frame { position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px; border-radius: 4px; }
+  .dawn .frame { border: 1px solid rgba(43,32,16,0.16); }
+  .dusk .frame { border: 1px solid rgba(237,231,217,0.16); }
+  .np { font-family: 'Noto Sans Devanagari', 'Archivo', sans-serif; line-height: 1.7; }
+  .en { font-family: 'Archivo', 'Noto Sans Devanagari', sans-serif; line-height: 1.7; }
+  .grow { flex-grow: 1; }
+  .rel { position: relative; }
+  .toggle { display: flex; height: 44px; border-radius: 999px; overflow: hidden; align-items: stretch; }
+  .dawn .toggle { border: 1px solid rgba(43,32,16,0.22); }
+  .dusk .toggle { border: 1px solid rgba(237,231,217,0.22); }
+  .toggle > div { display: flex; align-items: center; padding: 0 15px; font-size: 15px; }
+  .ticks { position: relative; }
+  .ticks > div { position: absolute; }
+  .meta { display: flex; justify-content: space-between; align-items: center; }
+  .chip { display: flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 999px; font-size: 15px; }
+  .dawn .chip { border: 1px solid rgba(43,32,16,0.30); color: #2B2010; }
+  .dawn .chip.set { border-color: #2B2010; background: #2B2010; color: #E7D2A8; font-weight: 600; }
+  .dusk .chip { border: 1px solid rgba(237,231,217,0.30); color: #EDE7D9; }
+  @media (max-width: 900px) { body { padding: 32px 16px 56px; } }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>Sunflower Guard — One Door</h1>
+  <p>One screen, one action. The whole screen is the button: tap anywhere to play, tap again to stop. You press it whenever you want. The app never decides that for you.</p>
+  <p>Six tracks take turns across the season so the flock never learns the pattern. That rotation runs on its own, but the track chip at the bottom right is tappable: each tap steps to the next track, and one more tap past the sixth hands it back to automatic. Nothing to set up, no internet.</p>
+  <p>Light ground by day, dark after sundown, purely so the screen is readable in the light you are standing in. The tick strip along the bottom is the product in one graphic — fifteen minutes, seven scares, irregular gaps, silence the rest of the time.</p>
+</div>
+
+<div class="row">
+
+  <!-- 1. Ready, Nepali, daylight -->
+  <div class="item">
+    <div class="label">Ready · Nepali</div>
+    <div class="phone dawn np">
+      <div class="frame"></div>
+
+      <div class="rel" style="display: flex; justify-content: flex-end;">
+        <div class="toggle">
+          <div style="background: #2B2010; color: #E7D2A8; font-weight: 600;">नेपाली</div>
+          <div style="color: rgba(43,32,16,0.55); font-weight: 500; font-family: 'Archivo', sans-serif;">EN</div>
+        </div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel">
+        <svg width="56" height="64" viewBox="0 0 56 64" fill="none" aria-hidden="true">
+          <path d="M5 3L52 32L5 61Z" fill="#B0430F"></path>
+        </svg>
+        <div style="font-size: 48px; font-weight: 700; line-height: 1.35; padding: 18px 0 0;">बजाउनुहोस्</div>
+        <div style="font-size: 19px; color: rgba(43,32,16,0.62);">१५ मिनेट</div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel" style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 15px; color: rgba(43,32,16,0.55);">बिहान र साँझमा सबैभन्दा प्रभावकारी</div>
+        <div class="ticks" style="height: 16px;">
+          <div style="left: 0; right: 0; top: 7px; height: 1px; background: rgba(43,32,16,0.20);"></div>
+          <div style="left: 4%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 17%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 24%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 41%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 58%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 73%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 91%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+        </div>
+        <div class="meta">
+          <div style="font-size: 15px; color: rgba(43,32,16,0.62);">दिन ९ / ३०</div>
+          <div class="chip">धुन ३</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 10px 0 0; border-top: 1px solid rgba(43,32,16,0.16);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(43,32,16,0.62)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 5L6 9H3v6h3l5 4V5z"></path>
+            <path d="M16.5 8.5a5 5 0 010 7"></path>
+            <path d="M19.5 5.5a9 9 0 010 13"></path>
+          </svg>
+          <div style="font-size: 16px; color: rgba(43,32,16,0.62);">स्पिकरको आवाज पूरा बढाउनुहोस्</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. Track chosen by hand, Nepali -->
+  <div class="item">
+    <div class="label">Track chosen by hand · Nepali</div>
+    <div class="phone dawn np">
+      <div class="frame"></div>
+
+      <div class="rel" style="display: flex; justify-content: flex-end;">
+        <div class="toggle">
+          <div style="background: #2B2010; color: #E7D2A8; font-weight: 600;">नेपाली</div>
+          <div style="color: rgba(43,32,16,0.55); font-weight: 500; font-family: 'Archivo', sans-serif;">EN</div>
+        </div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel">
+        <svg width="56" height="64" viewBox="0 0 56 64" fill="none" aria-hidden="true">
+          <path d="M5 3L52 32L5 61Z" fill="#B0430F"></path>
+        </svg>
+        <div style="font-size: 48px; font-weight: 700; line-height: 1.35; padding: 18px 0 0;">बजाउनुहोस्</div>
+        <div style="font-size: 19px; color: rgba(43,32,16,0.62);">१५ मिनेट</div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel" style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 15px; color: rgba(43,32,16,0.55);">थिच्दै जानुहोस्, स्वचालितमा फर्कन्छ</div>
+        <div class="ticks" style="height: 16px;">
+          <div style="left: 0; right: 0; top: 7px; height: 1px; background: rgba(43,32,16,0.20);"></div>
+          <div style="left: 7%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 19%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 33%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 46%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 64%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+          <div style="left: 79%; top: 2px; width: 2px; height: 11px; background: rgba(43,32,16,0.42);"></div>
+        </div>
+        <div class="meta">
+          <div style="font-size: 15px; color: rgba(43,32,16,0.62);">दिन ९ / ३०</div>
+          <div class="chip set">धुन ५</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 10px 0 0; border-top: 1px solid rgba(43,32,16,0.16);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(43,32,16,0.62)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 5L6 9H3v6h3l5 4V5z"></path>
+            <path d="M16.5 8.5a5 5 0 010 7"></path>
+            <path d="M19.5 5.5a9 9 0 010 13"></path>
+          </svg>
+          <div style="font-size: 16px; color: rgba(43,32,16,0.62);">स्पिकरको आवाज पूरा बढाउनुहोस्</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. Playing, Nepali -->
+  <div class="item">
+    <div class="label">Playing · Nepali</div>
+    <div class="phone dawn np">
+      <div class="frame"></div>
+
+      <div class="rel" style="display: flex; justify-content: flex-end;">
+        <div class="toggle">
+          <div style="background: #2B2010; color: #E7D2A8; font-weight: 600;">नेपाली</div>
+          <div style="color: rgba(43,32,16,0.55); font-weight: 500; font-family: 'Archivo', sans-serif;">EN</div>
+        </div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 9px; height: 9px; border-radius: 50%; background: #B0430F;"></div>
+          <div style="font-size: 16px; font-weight: 600; color: #B0430F;">बज्दै छ</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 12px; padding: 12px 0 0;">
+          <div style="font-size: 80px; font-weight: 600; line-height: 1.25;">१०:४८</div>
+          <div style="font-size: 19px; color: rgba(43,32,16,0.62);">बाँकी</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 30px 0 0;">
+          <div style="width: 26px; height: 26px; border-radius: 3px; background: #B0430F;"></div>
+          <div style="font-size: 24px; font-weight: 600;">रोक्नुहोस्</div>
+        </div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel" style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="ticks" style="height: 18px;">
+          <div style="left: 0; right: 0; top: 8px; height: 2px; background: rgba(43,32,16,0.20);"></div>
+          <div style="left: 0; width: 28%; top: 8px; height: 2px; background: #2B2010;"></div>
+          <div style="left: 4%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 17%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 24%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 28%; top: 0; width: 2px; height: 18px; background: #B0430F;"></div>
+          <div style="left: 41%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.24);"></div>
+          <div style="left: 58%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.24);"></div>
+          <div style="left: 73%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.24);"></div>
+          <div style="left: 91%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.24);"></div>
+        </div>
+        <div style="font-size: 16px; color: rgba(43,32,16,0.62);">७ मध्ये ३ वटा आवाज बजिसके</div>
+        <div style="display: flex; justify-content: space-between; font-size: 15px; color: rgba(43,32,16,0.62); padding: 10px 0 0; border-top: 1px solid rgba(43,32,16,0.16);">
+          <div>दिन ९ / ३०</div>
+          <div>धुन ३</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. Finished, English -->
+  <div class="item">
+    <div class="label">Finished · English</div>
+    <div class="phone dawn en">
+      <div class="frame"></div>
+
+      <div class="rel" style="display: flex; justify-content: flex-end;">
+        <div class="toggle">
+          <div style="color: rgba(43,32,16,0.55); font-weight: 500; font-family: 'Noto Sans Devanagari', sans-serif;">नेपाली</div>
+          <div style="background: #2B2010; color: #E7D2A8; font-weight: 600;">EN</div>
+        </div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel">
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#2B2010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 12.5l5.2 5.2L20 7"></path>
+        </svg>
+        <div style="font-size: 60px; font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; padding: 18px 0 0;">Finished</div>
+        <div style="font-size: 19px; color: rgba(43,32,16,0.62); padding: 14px 0 0; max-width: 280px; text-wrap: pretty;">Press again any time you want another run.</div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel" style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="ticks" style="height: 18px;">
+          <div style="left: 0; right: 0; top: 8px; height: 2px; background: #2B2010;"></div>
+          <div style="left: 4%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 17%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 24%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 41%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 58%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 73%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+          <div style="left: 91%; top: 3px; width: 2px; height: 12px; background: rgba(43,32,16,0.48);"></div>
+        </div>
+        <div style="font-size: 16px; color: rgba(43,32,16,0.62);">7 of 7 sounded</div>
+        <div class="meta" style="padding: 10px 0 0; border-top: 1px solid rgba(43,32,16,0.16);">
+          <div style="font-size: 15px; color: rgba(43,32,16,0.62);">Day 9 / 30</div>
+          <div class="chip">Track 3</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. Ready after dark, English -->
+  <div class="item">
+    <div class="label">Ready after dark · English</div>
+    <div class="phone dusk en">
+      <div class="frame"></div>
+
+      <div class="rel" style="display: flex; justify-content: flex-end;">
+        <div class="toggle">
+          <div style="color: rgba(237,231,217,0.55); font-weight: 500; font-family: 'Noto Sans Devanagari', sans-serif;">नेपाली</div>
+          <div style="background: #EDE7D9; color: #1B1F2D; font-weight: 600;">EN</div>
+        </div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel">
+        <svg width="56" height="64" viewBox="0 0 56 64" fill="none" aria-hidden="true">
+          <path d="M5 3L52 32L5 61Z" fill="#D8903A"></path>
+        </svg>
+        <div style="font-size: 60px; font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; padding: 20px 0 0;">Play</div>
+        <div style="font-size: 19px; color: #8E93A4; padding: 6px 0 0;">15 minutes</div>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="rel" style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 15px; color: #7B8090;">Works best at dawn and dusk</div>
+        <div class="ticks" style="height: 16px;">
+          <div style="left: 0; right: 0; top: 7px; height: 1px; background: rgba(237,231,217,0.20);"></div>
+          <div style="left: 4%; top: 2px; width: 2px; height: 11px; background: rgba(237,231,217,0.42);"></div>
+          <div style="left: 17%; top: 2px; width: 2px; height: 11px; background: rgba(237,231,217,0.42);"></div>
+          <div style="left: 24%; top: 2px; width: 2px; height: 11px; background: rgba(237,231,217,0.42);"></div>
+          <div style="left: 41%; top: 2px; width: 2px; height: 11px; background: rgba(237,231,217,0.42);"></div>
+          <div style="left: 58%; top: 2px; width: 2px; height: 11px; background: rgba(237,231,217,0.42);"></div>
+          <div style="left: 73%; top: 2px; width: 2px; height: 11px; background: rgba(237,231,217,0.42);"></div>
+          <div style="left: 91%; top: 2px; width: 2px; height: 11px; background: rgba(237,231,217,0.42);"></div>
+        </div>
+        <div class="meta">
+          <div style="font-size: 15px; color: #8E93A4;">Day 9 / 30</div>
+          <div class="chip">Track 3</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 10px 0 0; border-top: 1px solid rgba(237,231,217,0.16);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8E93A4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 5L6 9H3v6h3l5 4V5z"></path>
+            <path d="M16.5 8.5a5 5 0 010 7"></path>
+            <path d="M19.5 5.5a9 9 0 010 13"></path>
+          </svg>
+          <div style="font-size: 16px; color: #8E93A4;">Keep the speaker at full volume</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
