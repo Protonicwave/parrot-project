@@ -1,0 +1,25 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 390, "h": 844, "title": "Morning, ready (Nepali)" },
+    { "file": "Playing.dc.html", "x": 480, "y": 0, "w": 390, "h": 844, "title": "Playing (Nepali)" },
+    { "file": "Done.dc.html", "x": 960, "y": 0, "w": 390, "h": 844, "title": "Session done (English)" },
+    { "file": "Evening.dc.html", "x": 1440, "y": 0, "w": 390, "h": 844, "title": "Evening, ready (English)" }
+  ],
+  "annotations": [
+    {
+      "id": "note-brief",
+      "x": 0,
+      "y": -420,
+      "w": 900,
+      "text": "SUNFLOWER GUARD — One Door\n\nOne screen, one action. The whole screen is the button: tap anywhere to play, tap again to stop.\n\nThe phone already knows the time and the day, so it decides everything. Which session you are in, which of the six tracks plays today, whether you have already run this one. Nothing to set, nothing to choose, no internet.\n\nThe ground colour is the only status you need: warm cream for the dawn session, deep night for the dusk one. It matches the light you are standing in.\n\nThe tick strip along the bottom is the product in one graphic. Fifteen minutes, seven scares, irregular gaps, silence the rest of the time. Silence is what keeps the loud parts loud."
+    },
+    {
+      "id": "note-rotation",
+      "x": 960,
+      "y": -420,
+      "w": 400,
+      "text": "The day and track counters are the anti habituation mechanism, made visible but never made your problem. Six tracks take turns across the three to five week window so the flock never learns the pattern."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

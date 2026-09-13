@@ -1,0 +1,389 @@
+{
+  "generated": "2026-09-13T12:19:20",
+  "seed": 1337,
+  "sample_rate": 22050,
+  "minutes_per_track": 15.0,
+  "tracks": [
+    {
+      "file": "track_01.mp3",
+      "events": 7,
+      "size_mb": 7.2,
+      "log": [
+        {
+          "at_seconds": 27.32,
+          "duration": 4.35,
+          "stimuli": [
+            "alarm",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 151.63,
+          "duration": 5.87,
+          "stimuli": [
+            "alarm",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 294.4,
+          "duration": 9.04,
+          "stimuli": [
+            "alarm",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 445.47,
+          "duration": 4.3,
+          "stimuli": [
+            "alarm",
+            "chatter"
+          ]
+        },
+        {
+          "at_seconds": 530.14,
+          "duration": 4.36,
+          "stimuli": [
+            "alarm",
+            "chatter"
+          ]
+        },
+        {
+          "at_seconds": 626.71,
+          "duration": 5.33,
+          "stimuli": [
+            "chatter",
+            "alarm",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 731.6,
+          "duration": 5.59,
+          "stimuli": [
+            "alarm",
+            "distress"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "track_02.mp3",
+      "events": 6,
+      "size_mb": 7.2,
+      "log": [
+        {
+          "at_seconds": 9.15,
+          "duration": 7.44,
+          "stimuli": [
+            "shikra",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 206.67,
+          "duration": 6.3,
+          "stimuli": [
+            "alarm",
+            "distress",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 348.95,
+          "duration": 6.04,
+          "stimuli": [
+            "shikra",
+            "alarm",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 523.72,
+          "duration": 5.46,
+          "stimuli": [
+            "alarm",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 665.63,
+          "duration": 8.88,
+          "stimuli": [
+            "shikra",
+            "distress",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 873.32,
+          "duration": 7.02,
+          "stimuli": [
+            "alarm",
+            "distress",
+            "bang"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "track_03.mp3",
+      "events": 6,
+      "size_mb": 7.2,
+      "log": [
+        {
+          "at_seconds": 10.95,
+          "duration": 7.56,
+          "stimuli": [
+            "chatter",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 155.41,
+          "duration": 6.72,
+          "stimuli": [
+            "shikra",
+            "alarm",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 355.31,
+          "duration": 3.0,
+          "stimuli": [
+            "chatter",
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 526.07,
+          "duration": 3.83,
+          "stimuli": [
+            "alarm",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 693.24,
+          "duration": 8.33,
+          "stimuli": [
+            "shikra",
+            "chatter"
+          ]
+        },
+        {
+          "at_seconds": 837.88,
+          "duration": 6.25,
+          "stimuli": [
+            "shikra",
+            "chatter"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "track_04.mp3",
+      "events": 7,
+      "size_mb": 7.2,
+      "log": [
+        {
+          "at_seconds": 23.68,
+          "duration": 7.05,
+          "stimuli": [
+            "shikra",
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 173.07,
+          "duration": 7.82,
+          "stimuli": [
+            "shikra",
+            "chatter",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 317.46,
+          "duration": 4.69,
+          "stimuli": [
+            "alarm",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 474.81,
+          "duration": 5.41,
+          "stimuli": [
+            "chatter",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 561.82,
+          "duration": 5.1,
+          "stimuli": [
+            "shikra",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 730.97,
+          "duration": 4.54,
+          "stimuli": [
+            "alarm",
+            "chatter",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 826.6,
+          "duration": 5.65,
+          "stimuli": [
+            "alarm",
+            "distress",
+            "bang"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "track_05.mp3",
+      "events": 7,
+      "size_mb": 7.2,
+      "log": [
+        {
+          "at_seconds": 14.2,
+          "duration": 5.97,
+          "stimuli": [
+            "chatter",
+            "alarm",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 103.08,
+          "duration": 6.93,
+          "stimuli": [
+            "chatter",
+            "distress",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 232.66,
+          "duration": 5.07,
+          "stimuli": [
+            "chatter",
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 321.47,
+          "duration": 5.28,
+          "stimuli": [
+            "chatter",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 468.04,
+          "duration": 7.46,
+          "stimuli": [
+            "alarm",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 668.61,
+          "duration": 4.58,
+          "stimuli": [
+            "alarm",
+            "chatter",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 784.5,
+          "duration": 5.26,
+          "stimuli": [
+            "shikra",
+            "alarm"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "track_06.mp3",
+      "events": 7,
+      "size_mb": 7.2,
+      "log": [
+        {
+          "at_seconds": 14.29,
+          "duration": 4.45,
+          "stimuli": [
+            "chatter",
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 137.62,
+          "duration": 5.65,
+          "stimuli": [
+            "chatter",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 258.47,
+          "duration": 6.42,
+          "stimuli": [
+            "alarm",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 353.7,
+          "duration": 5.29,
+          "stimuli": [
+            "alarm",
+            "distress",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 535.77,
+          "duration": 6.52,
+          "stimuli": [
+            "chatter",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 712.21,
+          "duration": 5.79,
+          "stimuli": [
+            "chatter",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 846.68,
+          "duration": 4.34,
+          "stimuli": [
+            "alarm",
+            "distress"
+          ]
+        }
+      ]
+    }
+  ]
+}
