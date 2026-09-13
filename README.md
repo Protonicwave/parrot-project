@@ -80,7 +80,7 @@ control. Recreate the exact shipped set with its recorded seed:
     cd generator
     python cli.py --seed 1337
 
-Requires `numpy`, `requests`, `av` and `lameenc`, and a Xeno-canto API key in
+Requires `numpy`, `requests` and `av`, and a Xeno-canto API key in
 `.env` at the repository root as `XC_API_KEY`. The key is on your account page
 at <https://xeno-canto.org/account>. Downloads are cached, so only the first run
 needs the network. Omit `--seed` for a fresh set, which is the point of the
@@ -96,7 +96,7 @@ distress scream and the broadband bangs are synthesised. See
 
 Everything is band limited to 1 to 5 kHz, which is where parrot hearing peaks and
 where a cheap PA horn actually radiates. No energy is wasted above 8 kHz, where
-birds hear poorly or not at all. The six tracks come to 6.2 MB in total.
+birds hear poorly or not at all. The six tracks come to 5.8 MB in total.
 
 ## Contributing
 

@@ -5,7 +5,7 @@ silence with roughly seven scare events scattered at irregular intervals.
 
 ## Running it
 
-    pip install numpy requests av lameenc
+    pip install numpy requests av
     python cli.py --seed 1337
 
 Writes the tracks, `manifest.json` and `CREDITS.md` into `app/assets/tracks/`.

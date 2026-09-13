@@ -261,11 +261,16 @@ digital silence, which VBR encodes at almost no cost while constant bitrate pays
 full price for it. Expect a four to eightfold reduction, bringing the set to
 somewhere between 5 and 12 MB. Measure the real figure and record it.
 
-Measured in Phase 2: 6.8 times, from 7.20 MB to 1.05 MB for the same track, at
-LAME VBR quality 5. The six tracks come to 6.24 MB against 43.2 MB at 64 kbps
-constant. That sits inside the predicted range at both ends. The silence
-estimate was conservative: the tracks are 96.4 per cent digital silence, which
-is why the saving lands at the top of the range.
+Measured in Phase 2: 7.5 times, from 7.20 MB to 0.96 MB for the same track, at
+LAME VBR quality 5. The six tracks come to 5.75 MB against 43.2 MB at 64 kbps
+constant, so the set is a third of the lower end of the estimate. The silence
+assumption was conservative: the tracks are 96.4 per cent digital silence, which
+is why the saving beats the predicted range rather than landing inside it.
+
+The quality setting saturates. Anything from 2 upwards produces an identical
+file, because with no content above 5 kHz the encoder has nothing further to
+discard. Only quality 0 differs, and it is five times larger for no audible
+gain in a band that stops at 5 kHz.
 
 The audio is band limited to 5 kHz, so quality is unaffected by dropping the
 ceiling. Do not go below 22.05 kHz sampling.

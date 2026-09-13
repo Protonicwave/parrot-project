@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T14:01:56",
+  "generated": "2026-09-13T14:07:53",
   "seed": 1337,
   "sample_rate": 22050,
   "minutes_per_track": 15.0,
@@ -7,7 +7,7 @@
     {
       "file": "track_01.mp3",
       "events": 6,
-      "size_mb": 1.05,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 27.32,
@@ -67,7 +67,7 @@
     {
       "file": "track_02.mp3",
       "events": 7,
-      "size_mb": 1.05,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 9.15,
@@ -133,7 +133,7 @@
     {
       "file": "track_03.mp3",
       "events": 6,
-      "size_mb": 1.03,
+      "size_mb": 0.95,
       "log": [
         {
           "at_seconds": 10.95,
@@ -190,7 +190,7 @@
     {
       "file": "track_04.mp3",
       "events": 6,
-      "size_mb": 1.04,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 23.68,
@@ -248,7 +248,7 @@
     {
       "file": "track_05.mp3",
       "events": 6,
-      "size_mb": 1.02,
+      "size_mb": 0.95,
       "log": [
         {
           "at_seconds": 14.2,
@@ -307,7 +307,7 @@
     {
       "file": "track_06.mp3",
       "events": 7,
-      "size_mb": 1.05,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 14.29,
