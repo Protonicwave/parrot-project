@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0C0C0D; }
+    a { color: #C9902F; } a:hover { color: #E0A93D; }
+  </style>
+</helmet>
+<div style="width: 390px; height: 844px; background: #0C0C0D; color: #E9E4DA; font-family: 'IBM Plex Sans', system-ui, sans-serif; line-height: 1.7; display: flex; flex-direction: column; padding: 56px 28px 34px; box-sizing: border-box;">
+
+  <div style="display: flex; justify-content: flex-end;">
+    <div style="display: flex; height: 44px; border: 1px solid #26262B; border-radius: 999px; overflow: hidden; align-items: stretch;">
+      <div style="display: flex; align-items: center; padding: 0 15px; color: #6E6A64; font-size: 15px; font-weight: 500; font-family: 'Noto Sans Devanagari', sans-serif;">नेपाली</div>
+      <div style="display: flex; align-items: center; padding: 0 15px; background: #1A1713; color: #C9902F; font-size: 15px; font-weight: 600;">EN</div>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1;"></div>
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 34px;">
+
+    <div style="position: relative; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+      <div style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid #1F1C17;"></div>
+      <div style="position: absolute; inset: 22px; border-radius: 50%; border: 1px solid #2A251C;"></div>
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#C9902F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11 5L6 9H3v6h3l5 4V5z"></path>
+        <path d="M16.5 8.5a5 5 0 010 7"></path>
+        <path d="M19.5 5.5a9 9 0 010 13"></path>
+      </svg>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <div style="font-size: 27px; font-weight: 500; letter-spacing: -0.01em;">This only works loud</div>
+      <div style="font-size: 15px; color: #8A857E; line-height: 1.65; max-width: 288px; text-wrap: pretty;">Turn the phone and the speaker all the way up before you press play. Quiet playback is the most common reason this fails in the field.</div>
+    </div>
+
+  </div>
+
+  <div style="flex-grow: 1;"></div>
+
+  <div style="display: flex; flex-direction: column; gap: 18px;">
+    <div style="height: 58px; border-radius: 8px; background: #C9902F; color: #14100A; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 600;">The volume is up</div>
+    <div style="text-align: center; font-size: 12.5px; color: #55524D;">Shown once. It will not ask again.</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
