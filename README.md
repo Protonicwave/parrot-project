@@ -21,7 +21,7 @@ No hardware, no account, no network at runtime. Press play, put the phone down.
 | Phase | Scope | State |
 | --- | --- | --- |
 | 0 | Specification, repository skeleton, README | Complete |
-| 1 | The application, `app/` and `tests/core/` | Not started |
+| 1 | The application, `app/` and `tests/core/` | Complete |
 | 2 | Real recordings and the field guide, `generator/`, `docs/field-guide/` | Not started |
 
 Phases 1 and 2 touch disjoint directories and have no dependency on each other.
@@ -48,6 +48,23 @@ acceptance criteria for each phase.
 
 `docs/design/mockup.html` is the visual reference Phase 1 builds against. Open it
 in a browser.
+
+## Running it
+
+The app is static files with no build step, but it uses ES modules and a service
+worker, so it needs a server rather than a double clicked file:
+
+    python -m http.server 8765 --directory app
+
+Then open <http://localhost:8765/>. The first press of play pulls the day's
+track, about 7 MB, and caches it. After that the whole app works with the
+network off.
+
+## Running the tests
+
+    node --test "tests/core/*.test.mjs"
+
+Node 18 or newer. No dependencies to install.
 
 ## Regenerating the audio
 

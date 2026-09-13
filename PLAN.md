@@ -153,6 +153,7 @@ live bugs during design review.
 ├── .editorconfig             UTF-8, LF, 2 spaces, 4 for Python
 ├── app/
 │   ├── index.html            Shell. No inline logic
+│   ├── package.json          Marks app/src as ES modules for the test runner
 │   ├── manifest.webmanifest
 │   ├── service-worker.js     Precache shell, cache tracks on demand
 │   ├── assets/
@@ -231,8 +232,14 @@ Targets, not aspirations. A phase that misses one says so at handover.
 
 Notes that follow from these. Render by mutating the specific text nodes that
 change, never by rebuilding the screen. The tick strip is static once drawn, so
-only the playhead moves. Fonts are self hosted and subset to the glyphs actually
-used, because a rural first load cannot wait on a font CDN.
+only the playhead moves.
+
+Amended in Phase 1: fonts are the ones already on the phone rather than a self
+hosted subset. Shipping no font file at all beats shipping a small one, and it
+is the same answer to the same problem, which was that a rural first load cannot
+wait on a font CDN. The rule in 3.4.1 is unchanged and is what makes this safe:
+every font stack in the stylesheet ends in a Devanagari capable family, so
+Devanagari can never fall into a Latin only face.
 
 ### 5.3 Audio payload
 
@@ -247,8 +254,16 @@ somewhere between 5 and 12 MB. Measure the real figure and record it.
 The audio is band limited to 5 kHz, so quality is unaffected by dropping the
 ceiling. Do not go below 22.05 kHz sampling.
 
-The service worker caches the shell at install and fetches tracks on first run,
-behind an explicit prompt that states the size. Never download silently.
+The service worker caches the shell at install and fetches tracks on first run.
+Never download silently.
+
+Amended in Phase 1: the track is cached when the farmer presses play on it, and
+there is no separate prompt. A prompt needs somewhere to live, and the only
+screen there is has five states that section 3.2 fixes. Pressing play is already
+an explicit request for that one track, and nothing else is ever fetched: the
+other five stay on the server until a day or a chip tap calls for them. What the
+original wording bought and this does not is the size shown up front, so a farmer
+on a metered connection learns the cost by watching it arrive.
 
 ### 5.4 Comments and naming
 
