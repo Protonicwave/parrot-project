@@ -24,6 +24,9 @@ the ShareAlike terms apply to the tracks as well.
 | [XC215626](https://xeno-canto.org/215626) | *Accipiter badius* | Krishna Khan | India | [by-nc-sa/4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 | [XC296421](https://xeno-canto.org/296421) | *Accipiter badius* | Vivek Puliyeri | India | [by-nc-sa/4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 | [XC341470](https://xeno-canto.org/341470) | *Accipiter badius* | Pushpa Ausekar | India | [by-nc-sa/4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+| [XC343014](https://xeno-canto.org/343014) | *Accipiter badius* | Andrew Mascarenhas | India | [by-nc-sa/4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+| [XC441583](https://xeno-canto.org/441583) | *Accipiter badius* | Hemanya Radadia | India | [by-nc-sa/4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+| [XC697077](https://xeno-canto.org/697077) | *Accipiter badius* | Subhojit Chakraborty | India | [by-nc-sa/4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 
 The broadband bangs and the distress scream are synthesised and
 carry no third party rights.

@@ -22,6 +22,8 @@ def parse_args(argv=None):
                         help="length of each track in minutes")
     parser.add_argument("--count", type=int, default=6,
                         help="how many different tracks to build")
+    parser.add_argument("--rests", type=int, default=2,
+                        help="how many rest tracks to build, one event each")
     parser.add_argument("--out", default="../app/assets/tracks",
                         help="output directory")
     parser.add_argument("--seed", type=int, default=None,
@@ -58,29 +60,42 @@ def main(argv=None):
     for index in range(args.count):
         rng = np.random.default_rng(seed + index * 7919)
         audio, log = tracks.build_track(args.minutes, rng, library)
+        total_bytes += write_track(manifest, out, args, "track_%02d" % (index + 1),
+                                   "scare", audio, log)
 
-        name = "track_%02d" % (index + 1)
-        mp3_path = out / (name + ".mp3")
-        written = encode.write_mp3(mp3_path, audio, args.quality)
-        if args.wav:
-            encode.write_wav(out / (name + ".wav"), audio)
-
-        total_bytes += written
-        manifest["tracks"].append({
-            "file": name + ".mp3",
-            "events": len(log),
-            "size_mb": round(written / 1e6, 2),
-            "log": log,
-        })
-        print("%s  %2d events  %5.2f MB" % (name + ".mp3", len(log), written / 1e6))
+    # Rest tracks. Two rather than one so that a thinned out stretch of the day
+    # is not perfectly predictable.
+    for index in range(args.rests):
+        rng = np.random.default_rng(seed + 104729 + index * 7919)
+        audio, log = tracks.build_rest_track(args.minutes, rng, library)
+        total_bytes += write_track(manifest, out, args, "rest_%02d" % (index + 1),
+                                   "rest", audio, log)
 
     (out / "manifest.json").write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     write_credits(out / "CREDITS.md", ledger)
 
     print("\nseed %d, %d tracks, %.2f MB total, written to %s"
-          % (seed, args.count, total_bytes / 1e6, os.path.abspath(out)))
+          % (seed, args.count + args.rests, total_bytes / 1e6, os.path.abspath(out)))
     return 0
+
+
+def write_track(manifest, out, args, name, kind, audio, log):
+    """Encode one track, record it in the manifest and return the bytes written."""
+    written = encode.write_mp3(out / (name + ".mp3"), audio, args.quality)
+    if args.wav:
+        encode.write_wav(out / (name + ".wav"), audio)
+    manifest["tracks"].append({
+        "file": name + ".mp3",
+        # The only thing Phase 3 added to the contract. The generator says what
+        # it built; when to play it is the application's decision.
+        "kind": kind,
+        "events": len(log),
+        "size_mb": round(written / 1e6, 2),
+        "log": log,
+    })
+    print("%-14s %2d events  %5.2f MB" % (name + ".mp3", len(log), written / 1e6))
+    return written
 
 
 def write_credits(path, ledger):

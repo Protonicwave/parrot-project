@@ -60,3 +60,27 @@ def test_peak_amplitude_is_in_range(voice, library, rng):
 def test_every_planned_voice_exists():
     """The plan names five stimuli. A missing one would silently shrink the variety."""
     assert sorted(VOICES) == ["alarm", "bang", "chatter", "distress", "shikra"]
+
+
+def test_a_recording_is_never_used_by_two_events_in_a_row(library, rng):
+    """
+    The same recording twice running is the one repeat anybody notices, and it
+    undoes the variety the pools exist to provide.
+    """
+    for role in ("alarm", "chatter", "shikra"):
+        if len(library.clips[role]) < 2:
+            continue
+        library.start_event()
+        library.clip(role, rng, 2.0)
+        first = list(library.used)
+        for _ in range(20):
+            library.start_event(first)
+            library.clip(role, rng, 2.0)
+            assert not set(library.used) & set(first), "%s repeated across events" % role
+            first = list(library.used)
+
+
+def test_a_pool_of_one_still_yields_a_clip(library, rng):
+    """Degrade quietly: a role with nothing left to avoid falls back rather than failing."""
+    library.start_event([("alarm", at) for at in range(len(library.clips["alarm"]))])
+    assert len(library.clip("alarm", rng, 2.0)) > 0

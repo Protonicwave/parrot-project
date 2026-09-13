@@ -1,17 +1,42 @@
 {
-  "generated": "2026-09-13T14:07:53",
+  "generated": "2026-09-13T15:00:47",
   "seed": 1337,
   "sample_rate": 22050,
   "minutes_per_track": 15.0,
   "tracks": [
     {
       "file": "track_01.mp3",
+      "kind": "scare",
       "events": 6,
       "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 27.32,
-          "duration": 8.51,
+          "duration": 5.79,
+          "stimuli": [
+            "alarm",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 229.63,
+          "duration": 1.99,
+          "stimuli": [
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 366.35,
+          "duration": 9.06,
+          "stimuli": [
+            "alarm",
+            "chatter",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 530.25,
+          "duration": 7.34,
           "stimuli": [
             "alarm",
             "distress",
@@ -19,46 +44,19 @@
           ]
         },
         {
-          "at_seconds": 124.96,
-          "duration": 6.21,
+          "at_seconds": 640.74,
+          "duration": 6.53,
           "stimuli": [
             "alarm",
             "shikra"
           ]
         },
         {
-          "at_seconds": 324.17,
-          "duration": 7.35,
-          "stimuli": [
-            "alarm",
-            "distress",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 507.94,
-          "duration": 7.7,
+          "at_seconds": 780.04,
+          "duration": 7.6,
           "stimuli": [
             "chatter",
             "alarm",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 704.2,
-          "duration": 5.49,
-          "stimuli": [
-            "chatter",
-            "alarm",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 795.07,
-          "duration": 6.46,
-          "stimuli": [
-            "alarm",
-            "shikra",
             "bang"
           ]
         }
@@ -66,65 +64,64 @@
     },
     {
       "file": "track_02.mp3",
+      "kind": "scare",
       "events": 7,
-      "size_mb": 0.96,
+      "size_mb": 0.95,
       "log": [
         {
           "at_seconds": 9.15,
-          "duration": 4.4,
+          "duration": 7.14,
+          "stimuli": [
+            "alarm",
+            "chatter",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 130.14,
+          "duration": 2.52,
+          "stimuli": [
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 248.03,
+          "duration": 5.06,
           "stimuli": [
             "shikra",
             "alarm"
           ]
         },
         {
-          "at_seconds": 115.73,
-          "duration": 7.14,
+          "at_seconds": 452.94,
+          "duration": 2.9,
           "stimuli": [
-            "chatter",
-            "distress",
-            "bang"
+            "chatter"
           ]
         },
         {
-          "at_seconds": 322.03,
-          "duration": 5.62,
-          "stimuli": [
-            "shikra",
-            "distress"
-          ]
-        },
-        {
-          "at_seconds": 430.63,
-          "duration": 6.12,
-          "stimuli": [
-            "chatter",
-            "distress",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 557.14,
-          "duration": 5.55,
+          "at_seconds": 608.26,
+          "duration": 4.36,
           "stimuli": [
             "alarm",
             "shikra"
           ]
         },
         {
-          "at_seconds": 662.7,
-          "duration": 5.02,
+          "at_seconds": 773.5,
+          "duration": 6.28,
           "stimuli": [
+            "alarm",
             "chatter",
-            "alarm"
+            "bang"
           ]
         },
         {
-          "at_seconds": 814.15,
-          "duration": 7.23,
+          "at_seconds": 890.3,
+          "duration": 6.86,
           "stimuli": [
+            "chatter",
             "alarm",
-            "shikra",
             "bang"
           ]
         }
@@ -132,69 +129,29 @@
     },
     {
       "file": "track_03.mp3",
-      "events": 6,
-      "size_mb": 0.95,
+      "kind": "scare",
+      "events": 7,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 10.95,
-          "duration": 4.61,
-          "stimuli": [
-            "chatter",
-            "alarm"
-          ]
-        },
-        {
-          "at_seconds": 161.86,
-          "duration": 4.85,
-          "stimuli": [
-            "alarm",
-            "chatter"
-          ]
-        },
-        {
-          "at_seconds": 295.94,
-          "duration": 6.33,
-          "stimuli": [
-            "alarm",
-            "shikra",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 407.88,
-          "duration": 5.95,
-          "stimuli": [
-            "alarm",
-            "distress"
-          ]
-        },
-        {
-          "at_seconds": 607.54,
-          "duration": 7.38,
-          "stimuli": [
-            "chatter",
-            "alarm",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 785.81,
-          "duration": 5.93,
+          "duration": 4.99,
           "stimuli": [
             "chatter",
             "shikra"
           ]
-        }
-      ]
-    },
-    {
-      "file": "track_04.mp3",
-      "events": 6,
-      "size_mb": 0.96,
-      "log": [
+        },
         {
-          "at_seconds": 23.68,
-          "duration": 6.37,
+          "at_seconds": 111.59,
+          "duration": 5.12,
+          "stimuli": [
+            "alarm",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 221.14,
+          "duration": 5.85,
           "stimuli": [
             "shikra",
             "distress",
@@ -202,24 +159,8 @@
           ]
         },
         {
-          "at_seconds": 188.71,
-          "duration": 6.64,
-          "stimuli": [
-            "alarm",
-            "distress"
-          ]
-        },
-        {
-          "at_seconds": 355.62,
-          "duration": 5.85,
-          "stimuli": [
-            "alarm",
-            "chatter"
-          ]
-        },
-        {
-          "at_seconds": 528.5,
-          "duration": 7.69,
+          "at_seconds": 343.7,
+          "duration": 6.17,
           "stimuli": [
             "shikra",
             "alarm",
@@ -227,19 +168,87 @@
           ]
         },
         {
-          "at_seconds": 677.92,
-          "duration": 5.42,
+          "at_seconds": 534.26,
+          "duration": 7.12,
           "stimuli": [
             "alarm",
-            "shikra"
+            "distress"
           ]
         },
         {
-          "at_seconds": 814.16,
-          "duration": 5.08,
+          "at_seconds": 700.15,
+          "duration": 6.66,
           "stimuli": [
             "chatter",
+            "distress",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 799.16,
+          "duration": 5.69,
+          "stimuli": [
+            "alarm",
             "shikra",
+            "bang"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "track_04.mp3",
+      "kind": "scare",
+      "events": 6,
+      "size_mb": 0.95,
+      "log": [
+        {
+          "at_seconds": 23.68,
+          "duration": 5.77,
+          "stimuli": [
+            "alarm",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 124.32,
+          "duration": 7.53,
+          "stimuli": [
+            "shikra",
+            "chatter",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 299.83,
+          "duration": 5.61,
+          "stimuli": [
+            "alarm",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 450.08,
+          "duration": 5.24,
+          "stimuli": [
+            "shikra",
+            "alarm",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 624.28,
+          "duration": 5.73,
+          "stimuli": [
+            "shikra",
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 780.91,
+          "duration": 5.8,
+          "stimuli": [
+            "alarm",
+            "distress",
             "bang"
           ]
         }
@@ -247,20 +256,50 @@
     },
     {
       "file": "track_05.mp3",
-      "events": 6,
-      "size_mb": 0.95,
+      "kind": "scare",
+      "events": 7,
+      "size_mb": 0.94,
       "log": [
         {
           "at_seconds": 14.2,
-          "duration": 5.58,
+          "duration": 3.58,
           "stimuli": [
-            "chatter",
-            "distress"
+            "alarm"
           ]
         },
         {
-          "at_seconds": 124.61,
-          "duration": 6.23,
+          "at_seconds": 116.38,
+          "duration": 2.36,
+          "stimuli": [
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 273.15,
+          "duration": 1.9,
+          "stimuli": [
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 382.39,
+          "duration": 3.5,
+          "stimuli": [
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 541.76,
+          "duration": 6.14,
+          "stimuli": [
+            "alarm",
+            "distress",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 690.22,
+          "duration": 6.6,
           "stimuli": [
             "shikra",
             "alarm",
@@ -268,105 +307,104 @@
           ]
         },
         {
-          "at_seconds": 256.49,
-          "duration": 6.21,
+          "at_seconds": 782.77,
+          "duration": 2.4,
           "stimuli": [
-            "shikra",
-            "distress",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 413.37,
-          "duration": 5.98,
-          "stimuli": [
-            "shikra",
-            "chatter",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 571.01,
-          "duration": 5.49,
-          "stimuli": [
-            "shikra",
-            "distress"
-          ]
-        },
-        {
-          "at_seconds": 741.0,
-          "duration": 7.38,
-          "stimuli": [
-            "chatter",
-            "distress",
-            "bang"
+            "alarm"
           ]
         }
       ]
     },
     {
       "file": "track_06.mp3",
+      "kind": "scare",
       "events": 7,
-      "size_mb": 0.96,
+      "size_mb": 0.95,
       "log": [
         {
           "at_seconds": 14.29,
-          "duration": 4.94,
+          "duration": 5.17,
           "stimuli": [
-            "chatter",
+            "shikra",
             "alarm"
           ]
         },
         {
-          "at_seconds": 185.55,
-          "duration": 6.69,
+          "at_seconds": 215.24,
+          "duration": 5.72,
           "stimuli": [
             "alarm",
-            "shikra",
-            "bang"
+            "chatter"
           ]
         },
         {
-          "at_seconds": 368.83,
-          "duration": 5.96,
+          "at_seconds": 334.55,
+          "duration": 2.26,
           "stimuli": [
-            "shikra",
-            "alarm",
-            "bang"
+            "alarm"
           ]
         },
         {
-          "at_seconds": 547.66,
-          "duration": 5.53,
-          "stimuli": [
-            "alarm",
-            "chatter",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 647.92,
-          "duration": 5.58,
-          "stimuli": [
-            "alarm",
-            "shikra",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 750.17,
-          "duration": 5.46,
-          "stimuli": [
-            "chatter",
-            "shikra"
-          ]
-        },
-        {
-          "at_seconds": 850.51,
-          "duration": 5.34,
+          "at_seconds": 478.08,
+          "duration": 5.89,
           "stimuli": [
             "alarm",
             "shikra"
+          ]
+        },
+        {
+          "at_seconds": 579.91,
+          "duration": 1.95,
+          "stimuli": [
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 720.28,
+          "duration": 7.02,
+          "stimuli": [
+            "alarm",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 829.19,
+          "duration": 3.14,
+          "stimuli": [
+            "chatter"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "rest_01.mp3",
+      "kind": "rest",
+      "events": 1,
+      "size_mb": 0.9,
+      "log": [
+        {
+          "at_seconds": 846.29,
+          "duration": 2.04,
+          "stimuli": [
+            "chatter"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "rest_02.mp3",
+      "kind": "rest",
+      "events": 1,
+      "size_mb": 0.91,
+      "log": [
+        {
+          "at_seconds": 187.52,
+          "duration": 6.3,
+          "stimuli": [
+            "alarm",
+            "shikra",
+            "bang"
           ]
         }
       ]
@@ -660,6 +698,57 @@
       "centroid_hz": [
         3538,
         3894
+      ]
+    },
+    {
+      "id": "XC343014",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Andrew Mascarenhas",
+      "country": "India",
+      "type": "call",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/343014",
+      "role": "shikra",
+      "band_fraction": 0.932,
+      "centroid_hz": [
+        3751,
+        3836
+      ]
+    },
+    {
+      "id": "XC441583",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Hemanya Radadia",
+      "country": "India",
+      "type": "call",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/441583",
+      "role": "shikra",
+      "band_fraction": 0.939,
+      "centroid_hz": [
+        3363,
+        3824
+      ]
+    },
+    {
+      "id": "XC697077",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Subhojit Chakraborty",
+      "country": "India",
+      "type": "call, duet, song, subsong",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/697077",
+      "role": "shikra",
+      "band_fraction": 0.697,
+      "centroid_hz": [
+        2828,
+        2966
       ]
     }
   ]

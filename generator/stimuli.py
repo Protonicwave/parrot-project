@@ -10,17 +10,34 @@ class Library:
 
     def __init__(self, clips):
         self.clips = clips
+        self.used = []
+        self._avoid = set()
+
+    def start_event(self, avoid=()):
+        """
+        Begin an event, keeping clear of the recordings the last one used.
+
+        The same recording twice in a row is the one repeat a listener, bird or
+        farmer, is certain to notice, and it undoes the variety the pools exist
+        to provide.
+        """
+        self._avoid = set(avoid)
+        self.used = []
 
     def clip(self, role, rng, seconds):
         """
-        The loudest stretch of a randomly chosen recording.
+        The loudest stretch of a chosen recording.
 
         The pool is already band weighted and trimmed to a verified passage by
         sources.prepare, so all that is left here is choosing the length.
         """
         pool = self.clips[role]
-        source = pool[int(rng.integers(0, len(pool)))]
-        return dsp.normalise(dsp.fade_edges(dsp.loudest_window(source, seconds)))
+        allowed = [at for at in range(len(pool)) if (role, at) not in self._avoid]
+        if not allowed:                                 # a pool of one, or every one avoided
+            allowed = list(range(len(pool)))
+        at = allowed[int(rng.integers(0, len(allowed)))]
+        self.used.append((role, at))
+        return dsp.normalise(dsp.fade_edges(dsp.loudest_window(pool[at], seconds)))
 
 
 def parakeet_alarm(rng, library):
