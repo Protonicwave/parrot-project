@@ -1,6 +1,6 @@
-# Generated audio. Reproducible from the seed recorded in the manifest, and too
-# large to be worth versioning. See README for the regeneration command.
-app/assets/tracks/*.mp3
+# Intermediate WAV output. Reproducible from the seed recorded in the manifest.
+# The MP3s are versioned: the site serves them, and at 5.75 MB the set is no
+# longer large enough for the download to be worth the deploy machinery.
 app/assets/tracks/*.wav
 
 # Python

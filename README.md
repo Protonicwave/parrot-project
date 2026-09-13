@@ -6,6 +6,11 @@ three to five weeks the seed is worth eating.
 
 No hardware, no account, no network at runtime. Press play, put the phone down.
 
+**Try it: <https://protonicwave.github.io/parrot-project/>**
+
+Open it on a phone, turn the volume up and press anywhere. It installs to the
+home screen and works with the network off afterwards.
+
     git clone https://github.com/Protonicwave/parrot-project.git
 
 > **The Nepali strings are unverified.** They were authored without a native
@@ -97,6 +102,29 @@ distress scream and the broadband bangs are synthesised. See
 Everything is band limited to 1 to 5 kHz, which is where parrot hearing peaks and
 where a cheap PA horn actually radiates. No energy is wasted above 8 kHz, where
 birds hear poorly or not at all. The six tracks come to 5.8 MB in total.
+
+## Hosting
+
+`app/` is published to GitHub Pages by `.github/workflows/pages.yml` on every
+push to `main` that touches it. There is no build step: the workflow uploads the
+directory as it stands, which is the same thing `python -m http.server` serves
+locally. Every path in the app is relative, so it runs from a subdirectory
+without changes.
+
+The tracks are committed rather than generated during the deploy. Rebuilding
+them would put a Xeno-canto API key in a public repository's Actions and make
+every deploy depend on a third party archive being up, which is a poor trade for
+six files totalling 5.8 MB.
+
+## Licence
+
+The bird calls are field recordings from Xeno-canto under Creative Commons
+licences, so the tracks built from them are adaptations and ShareAlike carries
+over: the audio in `app/assets/tracks/` is **CC BY-NC-SA 4.0**, credited in
+`app/assets/tracks/CREDITS.md`.
+
+The code has no licence yet, which means default copyright and nobody else may
+reuse it. Worth choosing one.
 
 ## Contributing
 

@@ -149,7 +149,7 @@ live bugs during design review.
 <repository root>/
 ├── README.md                 What this is, how to run it, the unverified Nepali warning
 ├── PLAN.md                   This document
-├── .gitignore                Generated audio is reproducible, so it is not versioned
+├── .gitignore                Secrets, caches and intermediate WAV output
 ├── .editorconfig             UTF-8, LF, 2 spaces, 4 for Python
 ├── app/
 │   ├── index.html            Shell. No inline logic
@@ -189,6 +189,15 @@ live bugs during design review.
     ├── core/                Unit tests for the pure modules
     └── generator/           Spectral assertions on generated audio
 ```
+
+Amended in Phase 2: the MP3 tracks are versioned after all. The original reason
+not to was that 43 MB of reproducible audio is not worth carrying, and variable
+bitrate took the set to 5.75 MB. At that size the argument inverts: serving the
+app from GitHub Pages means the audio has to be in the repository or be rebuilt
+on every deploy, and rebuilding needs an API key in a public repository's
+Actions and a working connection to a third party archive. Carrying six small
+files is the cheaper and more durable of the two. The intermediate WAV output is
+still ignored, and so is the download cache.
 
 **The one architectural rule: pure core, impure edges.** Rotation, the state
 machine and numeral conversion are pure functions taking their inputs as
