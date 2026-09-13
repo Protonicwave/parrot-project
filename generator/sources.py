@@ -34,10 +34,15 @@ ROLES = {
         "type_must_include": "flight call",
         "wanted": 6,
     },
+    # The shikra pool was the smallest of the three at five, which made the
+    # predator the most repetitive voice in a track. The archive holds ninety
+    # usable shikra recordings, so the fix is to look at more of them: the
+    # search stopped at two pages and kept the first five that passed.
     "shikra": {
         "query": 'sp:"Accipiter badius" q:">C"',
         "type_must_include": "call",
-        "wanted": 5,
+        "wanted": 8,
+        "pages": 5,
     },
 }
 
@@ -273,7 +278,7 @@ def gather(key, roles=ROLES, log=print):
     ledger = []
 
     for role, spec in roles.items():
-        records = search(spec["query"], key)
+        records = search(spec["query"], key, spec.get("pages", 2))
         candidates = usable(records, spec["type_must_include"])
         if not candidates:
             raise SystemExit(
