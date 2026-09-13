@@ -5,6 +5,8 @@ already owns. It protects sunflower heads from rose-ringed parakeets during the
 three to five weeks the seed is worth eating.
 
 No hardware, no account, no network at runtime. Press play, put the phone down.
+It plays until you stop it, taking the six tracks in turn, and an all day mode
+thins the middle of the day out because that is when the flock is not there.
 
 **Try it: <https://protonicwave.github.io/parrot-project/>**
 
@@ -31,7 +33,7 @@ home screen and works with the network off afterwards.
 | 0 | Specification, repository skeleton, README | Complete |
 | 1 | The application, `app/` and `tests/core/` | Complete |
 | 2 | Real recordings and the field guide, `generator/`, `docs/field-guide/` | Complete |
-| 3a | Continuous playback and settings, `app/src/` and `tests/core/` | Specified |
+| 3a | Continuous playback and settings, `app/src/` and `tests/core/` | Complete |
 | 3b | Rest tracks and naturalness, `generator/` and `tests/generator/` | Specified |
 
 Phases that share no directories have no dependency on each other and can run

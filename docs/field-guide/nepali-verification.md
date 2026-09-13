@@ -35,6 +35,23 @@ From `app/assets/locales/ne.json`. The key is what the code asks for.
 | `volume` | स्पिकरको आवाज पूरा बढाउनुहोस् | Keep the speaker at full volume |  |
 | `eventsSounded` | {total} मध्ये {done} वटा आवाज बजिसके | {done} of {total} sounded |  |
 | `pressAgain` | फेरि बजाउन थिच्नुहोस् | Press again any time you want another run |  |
+| `modeContinuous` | लगातार | Continuous |  |
+| `modeAllDay` | दिनभर | All day |  |
+| `runsUntilStopped` | तपाईंले नरोकेसम्म बज्छ | Runs until you stop it |  |
+| `allDaySummary` | दिनभर, दिउँसो कम | All day, quieter at midday |  |
+| `elapsed` | चलेको | elapsed |  |
+| `soundedToday` | आज {done} वटा आवाज बजिसके | {done} sounded today |  |
+| `dawn` | बिहान | Dawn |  |
+| `midday` | दिउँसो | Midday |  |
+| `dusk` | साँझ | Dusk |  |
+| `allDayReason` | सुगा बिहान र साँझ आउँछ, त्यसैले त्यति बेला घना बज्छ | Parakeets come at dawn and dusk, so it plays densely then |  |
+| `settings` | सेटिङ | Settings |  |
+| `runLength` | कति बेरसम्म बजाउने | How long to play |  |
+| `fewer` | कम बजाउने | Fewer |  |
+| `same` | बराबर | Same |  |
+| `middayReason` | सुगा दिउँसो खेतमा आउँदैन। त्यति बेला कम बजाए आवाजको असर लामो समय रहन्छ। | Parakeets are not in the field at midday. Playing less then keeps the sound working for longer |  |
+| `language` | भाषा | Language |  |
+| `back` | फर्कनुहोस् | Back |  |
 
 ## Field guide
 

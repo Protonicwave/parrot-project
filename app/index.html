@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ne" data-ground="dawn" data-locale="ne" data-state="ready">
+<html lang="ne" data-ground="dawn" data-locale="ne" data-state="ready" data-mode="continuous" data-screen="main">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -13,9 +13,16 @@
 
 <button type="button" id="surface" class="surface"></button>
 
-<div class="screen">
+<div class="screen" id="mainScreen">
 
   <header class="top">
+    <button type="button" id="openSettings" class="icon">
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="3.2"></circle>
+        <path d="M19.4 15a1.6 1.6 0 00.32 1.77l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.6 1.6 0 00-1.77-.32 1.6 1.6 0 00-1 1.47V21a2 2 0 11-4 0v-.1a1.6 1.6 0 00-1.05-1.47 1.6 1.6 0 00-1.77.32l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.6 1.6 0 00.32-1.77 1.6 1.6 0 00-1.47-1H3a2 2 0 110-4h.1a1.6 1.6 0 001.47-1.05 1.6 1.6 0 00-.32-1.77l-.06-.06a2 2 0 112.83-2.83l.06.06a1.6 1.6 0 001.77.32H9a1.6 1.6 0 001-1.47V3a2 2 0 114 0v.1a1.6 1.6 0 001 1.47 1.6 1.6 0 001.77-.32l.06-.06a2 2 0 112.83 2.83l-.06.06a1.6 1.6 0 00-.32 1.77V9a1.6 1.6 0 001.47 1H21a2 2 0 110 4h-.1a1.6 1.6 0 00-1.47 1z"></path>
+      </svg>
+    </button>
     <div class="toggle">
       <button type="button" id="chooseNepali" class="option devanagari" lang="ne">नेपाली</button>
       <button type="button" id="chooseEnglish" class="option latin" lang="en">EN</button>
@@ -62,11 +69,21 @@
       <div id="playhead" class="playhead" hidden></div>
     </div>
 
+    <div id="dayStrip" class="dayStrip" hidden>
+      <div id="dayMarks" class="dayMarks"></div>
+      <div class="dayLabels">
+        <span id="dawnLabel"></span><span id="middayStripLabel"></span><span id="duskLabel"></span>
+      </div>
+    </div>
+
     <p id="soundedLine" class="sub" hidden></p>
 
     <div class="meta">
       <p id="dayLine" class="sub"></p>
-      <button type="button" id="trackChip" class="chip"></button>
+      <div class="chips">
+        <button type="button" id="modeChip" class="chip"></button>
+        <button type="button" id="trackChip" class="chip"></button>
+      </div>
     </div>
 
     <p class="volume">
@@ -82,7 +99,72 @@
 
 </div>
 
-<audio id="audio" preload="none"></audio>
+<div class="screen sheet" id="settingsScreen" hidden>
+
+  <header class="top settingsTop">
+    <button type="button" id="closeSettings" class="icon back">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 5l-7 7 7 7"></path>
+      </svg>
+    </button>
+    <h1 id="settingsTitle" class="settingsTitle"></h1>
+  </header>
+
+  <div class="rows">
+
+    <div class="row">
+      <p id="runLengthLabel" class="rowLabel"></p>
+      <div class="chips">
+        <button type="button" id="modeFifteen" class="chip"></button>
+        <button type="button" id="modeContinuous" class="chip"></button>
+        <button type="button" id="modeAllDay" class="chip"></button>
+      </div>
+    </div>
+
+    <div class="row">
+      <p id="middayLabel" class="rowLabel"></p>
+      <p id="middayReasonLine" class="rowNote"></p>
+      <div class="chips">
+        <button type="button" id="densityFewer" class="chip"></button>
+        <button type="button" id="densitySame" class="chip"></button>
+      </div>
+    </div>
+
+    <div class="row side">
+      <div class="stack">
+        <p id="trackLabel" class="rowLabel"></p>
+        <p id="trackNote" class="rowNote"></p>
+      </div>
+      <button type="button" id="settingsTrackChip" class="chip"></button>
+    </div>
+
+    <div class="row side">
+      <p id="languageLabel" class="rowLabel"></p>
+      <div class="toggle">
+        <button type="button" id="settingsNepali" class="option devanagari" lang="ne">नेपाली</button>
+        <button type="button" id="settingsEnglish" class="option latin" lang="en">EN</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grow"></div>
+
+  <p class="volume">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M11 5L6 9H3v6h3l5 4V5z"></path>
+      <path d="M16.5 8.5a5 5 0 010 7"></path>
+      <path d="M19.5 5.5a9 9 0 010 13"></path>
+    </svg>
+    <span id="settingsVolumeLine"></span>
+  </p>
+
+</div>
+
+<audio id="audioOne" preload="none"></audio>
+<audio id="audioTwo" preload="none"></audio>
 
 <script type="module" src="src/main.js"></script>
 </body>

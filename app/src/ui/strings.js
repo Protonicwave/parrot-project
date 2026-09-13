@@ -12,6 +12,13 @@ export function createStrings(bundles) {
     return locale === 'ne' ? toDevanagari(latin) : latin;
   }
 
+  function clock(seconds) {
+    const whole = Math.max(0, Math.round(seconds));
+    const minutes = Math.floor(whole / 60);
+    const rest = whole % 60;
+    return number(`${minutes}:${String(rest).padStart(2, '0')}`);
+  }
+
   return {
     use(next) {
       locale = next;
@@ -32,11 +39,16 @@ export function createStrings(bundles) {
 
     number,
 
-    clock(seconds) {
-      const whole = Math.max(0, Math.round(seconds));
-      const minutes = Math.floor(whole / 60);
-      const rest = whole % 60;
-      return number(`${minutes}:${String(rest).padStart(2, '0')}`);
+    clock,
+
+    // A run that can last all day turns into hours rather than counting minutes
+    // past sixty, so the display never reads 431:07.
+    elapsedClock(seconds) {
+      const whole = Math.max(0, Math.floor(seconds));
+      if (whole < 3600) return clock(whole);
+      const hours = Math.floor(whole / 3600);
+      const minutes = Math.floor((whole % 3600) / 60);
+      return number(`${hours}:${String(minutes).padStart(2, '0')}`);
     },
   };
 }

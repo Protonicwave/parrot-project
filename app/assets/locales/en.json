@@ -12,5 +12,22 @@
   "backToAuto": "Keep tapping to return to automatic",
   "volume": "Keep the speaker at full volume",
   "eventsSounded": "{done} of {total} sounded",
-  "pressAgain": "Press again any time you want another run"
+  "pressAgain": "Press again any time you want another run",
+  "modeContinuous": "Continuous",
+  "modeAllDay": "All day",
+  "runsUntilStopped": "Runs until you stop it",
+  "allDaySummary": "All day, quieter at midday",
+  "elapsed": "elapsed",
+  "soundedToday": "{done} sounded today",
+  "dawn": "Dawn",
+  "midday": "Midday",
+  "dusk": "Dusk",
+  "allDayReason": "Parakeets come at dawn and dusk, so it plays densely then",
+  "settings": "Settings",
+  "runLength": "How long to play",
+  "fewer": "Fewer",
+  "same": "Same",
+  "middayReason": "Parakeets are not in the field at midday. Playing less then keeps the sound working for longer",
+  "language": "Language",
+  "back": "Back"
 }
