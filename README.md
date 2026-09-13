@@ -31,9 +31,12 @@ home screen and works with the network off afterwards.
 | 0 | Specification, repository skeleton, README | Complete |
 | 1 | The application, `app/` and `tests/core/` | Complete |
 | 2 | Real recordings and the field guide, `generator/`, `docs/field-guide/` | Complete |
+| 3a | Continuous playback and settings, `app/src/` and `tests/core/` | Specified |
+| 3b | Rest tracks and naturalness, `generator/` and `tests/generator/` | Specified |
 
-Phases 1 and 2 touch disjoint directories and have no dependency on each other.
-They can run in either order, or at the same time.
+Phases that share no directories have no dependency on each other and can run
+in either order, or at the same time. Section 4.1 of `PLAN.md` freezes the one
+interface Phase 3's two halves share.
 
 `PLAN.md` is the contract. Read it before changing anything. It carries the
 frozen decisions, the full specification, the engineering standards and the

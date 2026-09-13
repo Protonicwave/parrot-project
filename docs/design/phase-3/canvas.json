@@ -1,0 +1,70 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Ready, continuous (Nepali)"
+    },
+    {
+      "file": "Playing.dc.html",
+      "x": 480,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Playing, continuous (Nepali)"
+    },
+    {
+      "file": "AllDay.dc.html",
+      "x": 960,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Ready, all day (Nepali)"
+    },
+    {
+      "file": "Settings.dc.html",
+      "x": 1440,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Settings (Nepali)"
+    },
+    {
+      "file": "Dusk.dc.html",
+      "x": 1920,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "Ready after dark (English)"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-brief",
+      "x": 0,
+      "y": -470,
+      "w": 900,
+      "text": "SUNFLOWER GUARD — PHASE 3 PROPOSAL\n\nThree changes to react to. Nothing here is built yet.\n\n1. IT NO LONGER STOPS AFTER FIFTEEN MINUTES. Press play and it runs until you press stop, chaining the six tracks in a reshuffled order so ninety minutes pass before anything repeats and there is no fixed period for a flock to learn.\n\n2. RUN LENGTH BECOMES A CHIP, not a screen. The track chip already cycles on tap, so the second chip beside it uses the same gesture: 15 minutes, continuous, all day. One screen and one action survive intact.\n\n3. ALL DAY IS A DUTY CYCLE, NOT A SIREN. See the third artboard."
+    },
+    {
+      "id": "note-allday",
+      "x": 960,
+      "y": -470,
+      "w": 420,
+      "text": "WHY ALL DAY THINS OUT AT MIDDAY\n\nParakeets feed shortly after dawn and again in late afternoon, and rest in shade through the middle of the day. Playing at full density into an empty field teaches the flock the sound is harmless, and that is the failure mode the whole design exists to avoid.\n\nSo the tick strip stops being fifteen minutes and becomes the whole day: dense at both ends, thin in the middle. The farmer can see the strategy rather than be told it.\n\nThis is the one artboard where I would most like to be argued with."
+    },
+    {
+      "id": "note-settings",
+      "x": 1440,
+      "y": -470,
+      "w": 420,
+      "text": "SETTINGS, KEPT HONEST\n\nEvery control here is a chip, because the app already speaks in chips and had no switches. Four rows is all I could justify: run length, midday density, track, language.\n\nNote that three of the four already exist on the main screen. If that stays true, the screen earns its place only once there is a fifth and sixth setting worth having. Worth deciding what those are before building it.\n\nThe Nepali on every artboard is unverified, like the rest of the project. The word for midday was changed to दिउँसो, which is what is actually spoken, rather than the formal form."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}
