@@ -287,5 +287,56 @@
       3538,
       3894
     ]
+  },
+  {
+    "id": "XC343014",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Andrew Mascarenhas",
+    "country": "India",
+    "type": "call",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/343014",
+    "role": "shikra",
+    "band_fraction": 0.932,
+    "centroid_hz": [
+      3751,
+      3836
+    ]
+  },
+  {
+    "id": "XC441583",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Hemanya Radadia",
+    "country": "India",
+    "type": "call",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/441583",
+    "role": "shikra",
+    "band_fraction": 0.939,
+    "centroid_hz": [
+      3363,
+      3824
+    ]
+  },
+  {
+    "id": "XC697077",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Subhojit Chakraborty",
+    "country": "India",
+    "type": "call, duet, song, subsong",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/697077",
+    "role": "shikra",
+    "band_fraction": 0.697,
+    "centroid_hz": [
+      2828,
+      2966
+    ]
   }
 ]

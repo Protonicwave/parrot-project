@@ -32,7 +32,7 @@ home screen and works with the network off afterwards.
 | 1 | The application, `app/` and `tests/core/` | Complete |
 | 2 | Real recordings and the field guide, `generator/`, `docs/field-guide/` | Complete |
 | 3a | Continuous playback and settings, `app/src/` and `tests/core/` | Specified |
-| 3b | Rest tracks and naturalness, `generator/` and `tests/generator/` | Specified |
+| 3b | Rest tracks and naturalness, `generator/` and `tests/generator/` | Complete |
 
 Phases that share no directories have no dependency on each other and can run
 in either order, or at the same time. Section 4.1 of `PLAN.md` freezes the one
@@ -51,7 +51,7 @@ acceptance criteria for each phase.
 | `app/src/core/` | Pure logic. No DOM, no clock, no storage, no audio |
 | `app/src/platform/` | Thin wrappers over browser capabilities |
 | `app/src/ui/` | Rendering and locale lookup |
-| `app/assets/tracks/` | The six audio tracks and their event manifest |
+| `app/assets/tracks/` | The six scare tracks, the two rest tracks and their event manifest |
 | `generator/` | Python tooling that produces the tracks |
 | `docs/field-guide/` | The printed farmer note and the Nepali verification sheet |
 | `docs/design/` | Reference mockup and the earlier design directions |
@@ -82,8 +82,8 @@ the cache is absent.
 
 ## Regenerating the audio
 
-The tracks are generated, not authored, so they are excluded from version
-control. Recreate the exact shipped set with its recorded seed:
+The tracks are generated rather than authored. Recreate the exact shipped set
+with its recorded seed:
 
     cd generator
     python cli.py --seed 1337
@@ -104,7 +104,7 @@ distress scream and the broadband bangs are synthesised. See
 
 Everything is band limited to 1 to 5 kHz, which is where parrot hearing peaks and
 where a cheap PA horn actually radiates. No energy is wasted above 8 kHz, where
-birds hear poorly or not at all. The six tracks come to 5.8 MB in total.
+birds hear poorly or not at all. The eight tracks come to 7.5 MB in total.
 
 ## Hosting
 
@@ -117,7 +117,7 @@ without changes.
 The tracks are committed rather than generated during the deploy. Rebuilding
 them would put a Xeno-canto API key in a public repository's Actions and make
 every deploy depend on a third party archive being up, which is a poor trade for
-six files totalling 5.8 MB.
+eight files totalling 7.5 MB.
 
 ## Licence
 
