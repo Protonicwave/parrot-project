@@ -9,6 +9,7 @@ import {
   playing,
   ready,
   remainingSeconds,
+  trackEnded,
   transition,
 } from '../../app/src/core/session.js';
 
@@ -50,4 +51,17 @@ test('an event counts as sounded the moment it starts', () => {
   assert.equal(eventsSounded(times, 27.32), 1);
   assert.equal(eventsSounded(times, 160), 2);
   assert.equal(eventsSounded(times, 900), 3);
+});
+
+test('a track ending in continuous mode does not reach finished', () => {
+  assert.equal(trackEnded(playing, false), playing);
+});
+
+test('a track ending in fifteen minute mode finishes the run', () => {
+  assert.equal(trackEnded(playing, true), finished);
+});
+
+test('a run stopped midway through a cycle goes straight back to ready', () => {
+  assert.equal(transition(playing, 'press'), ready);
+  assert.equal(trackEnded(ready, false), ready);
 });
