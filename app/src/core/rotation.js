@@ -23,3 +23,39 @@ export function nextChoice(manualChoice, trackCount) {
   if (manualChoice === null || manualChoice === undefined) return 1;
   return manualChoice >= trackCount ? null : manualChoice + 1;
 }
+
+// A small integer hash, so a cycle's order is reproducible from its number and
+// can be tested without a source of randomness.
+function mix(value) {
+  let state = (value + 0x9e3779b9) | 0;
+  state = Math.imul(state ^ (state >>> 16), 0x21f0aaad);
+  state = Math.imul(state ^ (state >>> 15), 0x735a2d97);
+  return (state ^ (state >>> 15)) >>> 0;
+}
+
+// The order a continuous cycle plays its tracks in. Each track is used once
+// before any repeats, so ninety minutes pass before a flock hears the same
+// scatter twice, and the order changes every cycle so there is no period to
+// learn. The last track of one cycle is never the first of the next, which is
+// the one repeat the shuffle cannot rule out on its own.
+export function playOrder(trackCount, cycleNumber, previousLast) {
+  const order = [];
+  for (let index = 0; index < trackCount; index += 1) order.push(index);
+
+  let state = mix(cycleNumber);
+  for (let at = trackCount - 1; at > 0; at -= 1) {
+    state = mix(state);
+    const swap = state % (at + 1);
+    const held = order[at];
+    order[at] = order[swap];
+    order[swap] = held;
+  }
+
+  if (trackCount > 1 && order[0] === previousLast) {
+    const last = trackCount - 1;
+    const held = order[0];
+    order[0] = order[last];
+    order[last] = held;
+  }
+  return order;
+}

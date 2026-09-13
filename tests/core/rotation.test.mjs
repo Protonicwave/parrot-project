@@ -2,7 +2,7 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { currentTrack, nextChoice, trackForDay } from '../../app/src/core/rotation.js';
+import { currentTrack, nextChoice, playOrder, trackForDay } from '../../app/src/core/rotation.js';
 
 test('every day of a thirty day season lands on a track', () => {
   for (let day = 0; day < 30; day += 1) {
@@ -46,4 +46,29 @@ test('the chip cycles through all six and returns to automatic', () => {
     seen.push(choice);
   }
   assert.deepEqual(seen, [1, 2, 3, 4, 5, 6, null]);
+});
+
+test('a cycle plays every track once', () => {
+  const order = playOrder(6, 3, null);
+  assert.equal(new Set(order).size, 6);
+  assert.deepEqual([...order].sort(), [0, 1, 2, 3, 4, 5]);
+});
+
+test('consecutive cycles are not in the same order', () => {
+  const orders = new Set();
+  for (let cycle = 0; cycle < 20; cycle += 1) orders.add(playOrder(6, cycle, null).join(''));
+  assert.ok(orders.size > 15, `only ${orders.size} distinct orders in twenty cycles`);
+});
+
+test('the last track of one cycle is never the first of the next', () => {
+  let previousLast = null;
+  for (let cycle = 0; cycle < 200; cycle += 1) {
+    const order = playOrder(6, cycle, previousLast);
+    assert.notEqual(order[0], previousLast, `cycle ${cycle} repeated across the join`);
+    previousLast = order[5];
+  }
+});
+
+test('a single track cycle still returns that track', () => {
+  assert.deepEqual(playOrder(1, 4, 0), [0]);
 });

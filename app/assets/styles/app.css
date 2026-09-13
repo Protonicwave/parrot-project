@@ -35,6 +35,10 @@ html[data-ground='dusk'] {
 
 * { box-sizing: border-box; }
 
+/* Several of the blocks that come and go are flex containers, and a display
+   rule outranks the browser's own rule for the hidden attribute. */
+[hidden] { display: none !important; }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -82,10 +86,12 @@ html[data-locale='ne'] body { font-family: var(--faceDevanagari); }
 
 .grow { flex: 1 1 0; min-height: 12px; }
 
-.top { display: flex; justify-content: flex-end; }
+.top { display: flex; align-items: center; justify-content: space-between; }
 
 .toggle {
   display: flex;
+  /* Never let the row it sits in squeeze a language out of sight. */
+  flex: none;
   /* 44px of tappable option plus the pill border: cold hands, dusty screen. */
   height: 46px;
   border: 1px solid var(--edge);
@@ -209,6 +215,7 @@ html[data-locale='en'] .action {
   color: var(--ink);
   font: inherit;
   font-size: 15px;
+  white-space: nowrap;
   cursor: pointer;
   pointer-events: auto;
 }
@@ -242,10 +249,88 @@ html[data-locale='en'] .action {
 
 /* The line above the day counter moves to the meta row once the volume
    reminder is gone, so the footer keeps its rule in every state. */
-html:not([data-state='ready']) .meta { padding-top: 10px; border-top: 1px solid var(--border); }
-html:not([data-state='ready']) .volume { display: none; }
-html[data-state='playing'] .hint { display: none; }
-html[data-state='finished'] .hint { display: none; }
+html:not([data-state='ready']) #mainScreen .meta { padding-top: 10px; border-top: 1px solid var(--border); }
+html:not([data-state='ready']) #mainScreen .volume { display: none; }
+html:not([data-state='ready']) #mainScreen .hint { display: none; }
+
+/* Two screens now, one at a time. The main screen still does one thing: what
+   settings holds is the choice made once, never the choice made in the field. */
+.sheet { pointer-events: auto; }
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  /* Optically flush with the text below it, which the 44px target is not. */
+  margin-left: -10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--inkSoft);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.icon.back { color: var(--ink); }
+
+.icon.gone { visibility: hidden; pointer-events: none; }
+
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; pointer-events: auto; }
+
+/* The day, dense at both ends and thin in the middle. It is the one graphic
+   that explains what all day mode does, so the marks are generated from the
+   density rule itself rather than drawn to look right. */
+.dayStrip { display: flex; flex-direction: column; gap: 10px; }
+
+.dayMarks {
+  position: relative;
+  height: 18px;
+  background-position: 0 3px;
+  background-repeat: no-repeat;
+  background-size: 100% 12px;
+}
+
+.dayMarks::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  height: 2px;
+  background: var(--line);
+}
+
+/* The labels sit under the part of the day they name, not at the ends of the
+   strip: a label that does not line up with its marks is copy contradicting
+   the data beside it. */
+.dayLabels { position: relative; height: 26px; color: var(--inkFaint); font-size: 15px; }
+
+.dayLabels > span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+
+
+.settingsTop { gap: 10px; justify-content: flex-start; }
+
+.settingsTitle { margin: 0; font-size: 24px; font-weight: 600; line-height: 1.35; }
+
+.rows { display: flex; flex-direction: column; padding-top: 14px; }
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.row.side { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+
+.stack { display: flex; flex-direction: column; }
+
+.rowLabel { margin: 0; font-size: 16px; }
+
+.rowNote { margin: 0; color: var(--inkFaint); font-size: 15px; }
 
 /* A 390 by 844 viewport is the design target. Narrower phones lose the display
    sizes first, since everything else is already at its minimum. */
@@ -254,4 +339,12 @@ html[data-state='finished'] .hint { display: none; }
   html[data-locale='en'] .action { font-size: 46px; }
   .countdown { font-size: 62px; }
   .stopRow { padding-top: 18px; }
+  /* Four rows, a title and the volume reminder do not fit a 568px screen at
+     the full spacing, and the row heights are the only part of it that is not
+     a minimum set by a finger or by Devanagari. */
+  .grow { min-height: 0; }
+  .settingsTitle { font-size: 21px; }
+  .rows { padding-top: 4px; }
+  .row { gap: 8px; padding: 8px 0; }
+  .sheet .volume { padding-top: 6px; }
 }

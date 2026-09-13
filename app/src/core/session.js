@@ -37,3 +37,10 @@ export function eventsSounded(eventTimes, elapsedSeconds) {
   }
   return count;
 }
+
+// A track ending only finishes the run in fifteen minute mode. In continuous
+// and all day the same event starts the next track instead, so whether the run
+// is over is decided by the schedule and passed in here.
+export function trackEnded(state, endsTheRun) {
+  return endsTheRun ? transition(state, 'complete') : state;
+}

@@ -20,3 +20,9 @@ export function isAfterDark(time) {
   const hour = time.getHours();
   return hour < 6 || hour >= 18;
 }
+
+// Minutes from local midnight. The feeding windows are fixed clock times, so
+// this is the only shape the schedule needs the time in.
+export function minutesOfDay(time) {
+  return time.getHours() * 60 + time.getMinutes();
+}
