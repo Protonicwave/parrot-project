@@ -1,0 +1,7 @@
+# Normalise to LF in the repository and on checkout, so the working tree matches
+# what .editorconfig promises regardless of the contributor's platform.
+* text=auto eol=lf
+
+# Generated audio is binary and must never be line ending converted.
+*.mp3 binary
+*.wav binary
