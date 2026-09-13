@@ -1,7 +1,7 @@
 // Owns offline availability. The shell is precached at install, the tracks are
 // cached only when the farmer actually presses play on one.
 
-const shellCache = 'sunflower-shell-v1';
+const shellCache = 'sunflower-shell-v2';
 const trackCache = 'sunflower-tracks-v1';
 
 const shell = [
@@ -16,11 +16,14 @@ const shell = [
   'src/main.js',
   'src/core/numerals.js',
   'src/core/rotation.js',
+  'src/core/schedule.js',
+  'src/core/settings.js',
   'src/core/session.js',
   'src/platform/clock.js',
   'src/platform/player.js',
   'src/platform/store.js',
   'src/ui/render.js',
+  'src/ui/settings.js',
   'src/ui/strings.js',
 ];
 
