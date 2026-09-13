@@ -17,3 +17,7 @@ Thumbs.db
 
 # Secrets. The Xeno-canto key is personal and must never reach a public repo.
 .env
+
+# Cached Xeno-canto downloads. Re-fetchable from the identifiers pinned in
+# generator/recordings.json, and too large to be worth versioning.
+generator/recordings/

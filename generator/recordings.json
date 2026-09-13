@@ -1,0 +1,291 @@
+[
+  {
+    "id": "XC475256",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Stanislas Wroza",
+    "country": "France",
+    "type": "alarm call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/475256",
+    "role": "alarm",
+    "band_fraction": 0.965,
+    "centroid_hz": [
+      3238,
+      3272
+    ]
+  },
+  {
+    "id": "XC475257",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Stanislas Wroza",
+    "country": "France",
+    "type": "alarm call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/475257",
+    "role": "alarm",
+    "band_fraction": 0.946,
+    "centroid_hz": [
+      3116,
+      3172
+    ]
+  },
+  {
+    "id": "XC694154",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Eduardo Realinho",
+    "country": "Portugal",
+    "type": "alarm call, call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/694154",
+    "role": "alarm",
+    "band_fraction": 0.983,
+    "centroid_hz": [
+      3355,
+      3378
+    ]
+  },
+  {
+    "id": "XC694156",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Eduardo Realinho",
+    "country": "Portugal",
+    "type": "alarm call, call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/694156",
+    "role": "alarm",
+    "band_fraction": 0.977,
+    "centroid_hz": [
+      3130,
+      3231
+    ]
+  },
+  {
+    "id": "XC855824",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Martin Billard",
+    "country": "France",
+    "type": "alarm call, call, flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/855824",
+    "role": "alarm",
+    "band_fraction": 0.806,
+    "centroid_hz": [
+      3296,
+      3437
+    ]
+  },
+  {
+    "id": "XC855829",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Martin Billard",
+    "country": "France",
+    "type": "alarm call, call, flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/855829",
+    "role": "alarm",
+    "band_fraction": 0.931,
+    "centroid_hz": [
+      2952,
+      3181
+    ]
+  },
+  {
+    "id": "XC207014",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Rajgopal Patil",
+    "country": "India",
+    "type": "call, flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/207014",
+    "role": "chatter",
+    "band_fraction": 0.876,
+    "centroid_hz": [
+      3514,
+      3745
+    ]
+  },
+  {
+    "id": "XC612032",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Samiul Mohsanin",
+    "country": "Bangladesh",
+    "type": "flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/612032",
+    "role": "chatter",
+    "band_fraction": 0.82,
+    "centroid_hz": [
+      3131,
+      3601
+    ]
+  },
+  {
+    "id": "XC680468",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "Jelle Scharringa",
+    "country": "India",
+    "type": "call, flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/680468",
+    "role": "chatter",
+    "band_fraction": 0.849,
+    "centroid_hz": [
+      3440,
+      3458
+    ]
+  },
+  {
+    "id": "XC979930",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "David Darrell-Lambert",
+    "country": "India",
+    "type": "flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/979930",
+    "role": "chatter",
+    "band_fraction": 0.845,
+    "centroid_hz": [
+      3117,
+      3265
+    ]
+  },
+  {
+    "id": "XC979932",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "David Darrell-Lambert",
+    "country": "India",
+    "type": "flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/979932",
+    "role": "chatter",
+    "band_fraction": 0.872,
+    "centroid_hz": [
+      3534,
+      3639
+    ]
+  },
+  {
+    "id": "XC980121",
+    "species": "Psittacula krameri",
+    "english": "Rose-ringed Parakeet",
+    "recordist": "David Darrell-Lambert",
+    "country": "India",
+    "type": "flight call",
+    "quality": "A",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/980121",
+    "role": "chatter",
+    "band_fraction": 0.814,
+    "centroid_hz": [
+      3477,
+      3503
+    ]
+  },
+  {
+    "id": "XC141625",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Sagar Chandane",
+    "country": "India",
+    "type": "call",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "url": "https://xeno-canto.org/141625",
+    "role": "shikra",
+    "band_fraction": 0.95,
+    "centroid_hz": [
+      3451,
+      3620
+    ]
+  },
+  {
+    "id": "XC206429",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Sushant more",
+    "country": "India",
+    "type": "call",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/206429",
+    "role": "shikra",
+    "band_fraction": 0.804,
+    "centroid_hz": [
+      3090,
+      3399
+    ]
+  },
+  {
+    "id": "XC215626",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Krishna Khan",
+    "country": "India",
+    "type": "call",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/215626",
+    "role": "shikra",
+    "band_fraction": 0.891,
+    "centroid_hz": [
+      3361,
+      3466
+    ]
+  },
+  {
+    "id": "XC296421",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Vivek Puliyeri",
+    "country": "India",
+    "type": "call",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/296421",
+    "role": "shikra",
+    "band_fraction": 0.758,
+    "centroid_hz": [
+      3190,
+      3865
+    ]
+  },
+  {
+    "id": "XC341470",
+    "species": "Accipiter badius",
+    "english": "Shikra",
+    "recordist": "Pushpa Ausekar",
+    "country": "India",
+    "type": "call",
+    "quality": "B",
+    "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "url": "https://xeno-canto.org/341470",
+    "role": "shikra",
+    "band_fraction": 0.896,
+    "centroid_hz": [
+      3538,
+      3894
+    ]
+  }
+]
