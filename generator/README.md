@@ -1,7 +1,16 @@
 # Track generator
 
-Builds the six fifteen minute tracks the app plays. Each is almost entirely
-silence with roughly seven scare events scattered at irregular intervals.
+Builds the eight fifteen minute tracks the app plays. Six are scare tracks,
+almost entirely silence with roughly seven events scattered at irregular
+intervals. Two are rest tracks, the same fifteen minutes carrying a single
+event, which is how all day mode thins the middle of the day out: a phone
+suspends an app that is not actually playing, so the quiet has to be in the
+file rather than between files.
+
+Each event takes a peak between 0.55 and 1.0 of full scale, so not every alarm
+sounds as though it is the same distance away, and roughly one in five is a
+single call that does not escalate, because real alarms often come to nothing.
+No source recording is used by two consecutive events in a track.
 
 ## Running it
 
