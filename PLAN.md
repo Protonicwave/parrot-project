@@ -120,6 +120,13 @@ which was never a decision so much as the shape of a single file.
   screen suspends an app that is not actually playing, and the next event would
   never fire. Baked in silence is what keeps the audio session alive, and it is
   the same reason a track is mostly silence in the first place.
+- **A manual track choice starts the cycle rather than replacing it.** Amended
+  during Phase 3a, where the two rules met for the first time. In fifteen minute
+  mode the chosen track is the whole run, as it always was. In continuous and
+  all day it is the first track of the first cycle and the rotation carries on
+  from there, because holding one track for twelve hours is precisely the
+  habituation the rotation exists to prevent. The chip still says what it always
+  said: this is the track you are getting next.
 - **Stopping is still one tap** anywhere on the main screen, in every mode.
 - **Density is the app's decision, not the generator's.** The generator labels
   what it built and says nothing about when to play it. See 4.1.
