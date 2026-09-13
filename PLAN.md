@@ -211,7 +211,9 @@ speaker. Flag this in the README so it cannot be forgotten.
 Phase 2 built the sheet the check runs from,
 `docs/field-guide/nepali-verification.md`, generated from the locale files and
 the field guide so it cannot drift from what ships. Phase 3 regenerates it to
-pick up the strings added above. The check itself still needs a person, and
+pick up the strings added above. Amended during the build: the regeneration
+belongs to Phase 3a rather than 3b, because 3a is the half that writes the
+strings and 3b cannot see them. Section 6 lists it under 3b, which was a slip. The check itself still needs a person, and
 until it happens nothing here goes to a farm.
 
 ### 3.4 Interface rules that must not be broken
@@ -670,7 +672,9 @@ either order or at the same time, and neither waits on the other.
   3. The declared duration of every encoded track matches `minutes_per_track`.
   4. Total payload under 15 MB, with the real figure recorded.
   5. Every recording still carries its identifier, recordist and licence.
-  6. The verification sheet is regenerated so it covers the new strings.
+  6. The verification sheet is regenerated so it covers the new strings. Moved
+     to Phase 3a during the build, per the note in section 3.3: the strings
+     live there and this half cannot see them.
 
 #### Before adding a fifth settings row
 
@@ -788,7 +792,7 @@ rule 13 in section 7.
 
 1. **Nepali verification.** Every Nepali string is unverified. Needs a native
    speaker before any field use. Phase 2 added
-   `docs/field-guide/nepali-verification.md`, which puts all 29 strings, the
+   `docs/field-guide/nepali-verification.md`, which puts all 46 strings, the
    interface and the field guide alike, in one sheet beside their intended
    meaning. The check itself still needs a person.
 2. **Listening test.** The audio has been checked spectrally but never heard.
