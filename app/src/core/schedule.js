@@ -102,7 +102,7 @@ function wantsRest(run, minutesOfDay) {
 }
 
 function nextScare(run) {
-  const next = { ...run, kind: 'scare', restsSince: 0 };
+  const next = { ...run, kind: 'scare', restsSince: 0, restChoice: run.restChoice + 1 };
   if (run.at + 1 < run.order.length) {
     next.at = run.at + 1;
     return next;
@@ -113,15 +113,17 @@ function nextScare(run) {
   return next;
 }
 
-// Which of the two rest tracks comes next is chosen rather than alternated:
-// there are two of them so that a sparse period is not perfectly predictable,
-// and taking turns would hand that back.
+// The two rest tracks never run back to back as the same file: that is the one
+// repeat a sparse stretch cannot afford, since there is only one event in each
+// and hearing it twice running is hearing the same fifteen minutes twice. A
+// scare track advances the counter as well, so the pair that follows one starts
+// on the other foot and a whole afternoon does not settle into ABABAB.
 function nextRest(run) {
   return {
     ...run,
     kind: 'rest',
     restsSince: run.restsSince + 1,
-    restChoice: run.restChoice + 1 + ((run.at + run.restsSince) % 2),
+    restChoice: run.restChoice + 1,
   };
 }
 

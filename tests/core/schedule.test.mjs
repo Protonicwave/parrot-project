@@ -143,3 +143,28 @@ test('the day is dense in both windows and thin between them', () => {
 test('the same density at midday fills the whole day evenly', () => {
   assert.equal(dayShape(15, 'same').length, 96);
 });
+
+test('the same rest track never plays twice running', () => {
+  const kinds = partition(withRests);
+  const steps = run(kinds, { mode: allDay, middayDensity: 'fewer' }, 20, midday);
+  const rests = steps.filter((step) => step.kind === 'rest');
+  assert.ok(rests.length > 6, 'not enough rest tracks to judge');
+  for (let at = 1; at < steps.length; at += 1) {
+    if (steps[at].kind !== 'rest' || steps[at - 1].kind !== 'rest') continue;
+    assert.notEqual(steps[at].track, steps[at - 1].track,
+      `the same rest track twice running at step ${at}`);
+  }
+  assert.equal(new Set(rests.map((step) => step.track)).size, 2, 'one rest track is never used');
+});
+
+test('a whole sparse afternoon does not settle into one pattern', () => {
+  const kinds = partition(withRests);
+  const steps = run(kinds, { mode: allDay, middayDensity: 'fewer' }, 23, midday);
+  const pairs = [];
+  for (let at = 0; at + 1 < steps.length; at += 1) {
+    if (steps[at].kind === 'rest' && steps[at + 1].kind === 'rest') {
+      pairs.push(`${steps[at].track}${steps[at + 1].track}`);
+    }
+  }
+  assert.ok(new Set(pairs).size > 1, `every pair of rests is ${pairs[0]}`);
+});
