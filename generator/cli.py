@@ -105,6 +105,15 @@ def write_credits(path, ledger):
     lines.append("The broadband bangs and the distress scream are synthesised and")
     lines.append("carry no third party rights.")
     lines.append("")
+    lines.append("## Licence of the tracks")
+    lines.append("")
+    lines.append("The tracks are adaptations of the recordings above, so ShareAlike")
+    lines.append("carries over: they are published under")
+    lines.append("[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).")
+    lines.append("Use them, change them and pass them on, but not commercially, credit")
+    lines.append("the recordists listed here, and keep the same licence on anything")
+    lines.append("derived from them.")
+    lines.append("")
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
