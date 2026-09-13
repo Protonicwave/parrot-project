@@ -21,3 +21,6 @@ Thumbs.db
 # Cached Xeno-canto downloads. Re-fetchable from the identifiers pinned in
 # generator/recordings.json, and too large to be worth versioning.
 generator/recordings/
+
+# Assembled design canvases. Rebuilt from the .dc.html artboards beside them.
+docs/design/**/sunflower-guard-*.html
