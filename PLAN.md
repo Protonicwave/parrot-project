@@ -11,7 +11,7 @@ document first and then builds.
 
 Repository: <https://github.com/Protonicwave/parrot-project>
 
-Status: specification frozen. No application code written yet.
+Status: specification frozen. Phases 0, 1 and 2 complete.
 
 ---
 
@@ -261,6 +261,12 @@ digital silence, which VBR encodes at almost no cost while constant bitrate pays
 full price for it. Expect a four to eightfold reduction, bringing the set to
 somewhere between 5 and 12 MB. Measure the real figure and record it.
 
+Measured in Phase 2: 6.8 times, from 7.20 MB to 1.05 MB for the same track, at
+LAME VBR quality 5. The six tracks come to 6.24 MB against 43.2 MB at 64 kbps
+constant. That sits inside the predicted range at both ends. The silence
+estimate was conservative: the tracks are 96.4 per cent digital silence, which
+is why the saving lands at the top of the range.
+
 The audio is band limited to 5 kHz, so quality is unaffected by dropping the
 ceiling. Do not go below 22.05 kHz sampling.
 
@@ -462,11 +468,16 @@ should be filled here rather than improvised there.
 Neither blocks Phase 1.
 
 1. **Nepali verification.** Every Nepali string is unverified. Needs a native
-   speaker before any field use.
-2. **Listening test.** The synthesised calls have been checked spectrally but
-   never heard. Somebody needs to play a track and say whether the alarm reads as
-   a bird or as a synthesiser. If it reads as a synthesiser, Phase 2 fixes it
-   with real recordings anyway.
+   speaker before any field use. Phase 2 added
+   `docs/field-guide/nepali-verification.md`, which puts all 29 strings, the
+   interface and the field guide alike, in one sheet beside their intended
+   meaning. The check itself still needs a person.
+2. **Listening test.** The audio has been checked spectrally but never heard.
+   Phase 2 replaced the parakeet alarm, the flock chatter and the shikra with
+   real recordings, so the original form of this question is settled: those
+   three are birds because they are recordings of birds. What remains is whether
+   an assembled event reads as something happening, and whether the synthesised
+   distress scream sits convincingly beside the real calls.
 
 ## 9. Reference figures
 
