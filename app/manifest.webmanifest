@@ -1,0 +1,19 @@
+{
+  "name": "सूर्यमुखी रक्षक",
+  "short_name": "सूर्यमुखी रक्षक",
+  "lang": "ne",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#E7D2A8",
+  "theme_color": "#E7D2A8",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
