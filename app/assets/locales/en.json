@@ -1,0 +1,16 @@
+{
+  "appName": "Sunflower Guard",
+  "play": "Play",
+  "stop": "Stop",
+  "playing": "Playing",
+  "finished": "Finished",
+  "duration": "15 minutes",
+  "remaining": "left",
+  "day": "Day",
+  "track": "Track",
+  "advisory": "Works best at dawn and dusk",
+  "backToAuto": "Keep tapping to return to automatic",
+  "volume": "Keep the speaker at full volume",
+  "eventsSounded": "{done} of {total} sounded",
+  "pressAgain": "Press again any time you want another run"
+}

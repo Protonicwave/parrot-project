@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sunflower Guard">
+  <rect width="512" height="512" fill="#E7D2A8"/>
+  <circle cx="256" cy="256" r="132" fill="none" stroke="#2B2010" stroke-width="14"/>
+  <path d="M212 178L330 256L212 334Z" fill="#B0430F"/>
+</svg>

@@ -1,0 +1,257 @@
+/* Owns the whole of the appearance. One screen, two grounds, two scripts. */
+
+:root {
+  /* Devanagari must never fall back to a Latin only face: it renders as boxes
+     or as the wrong typeface. Every stack below ends in a Devanagari capable
+     family, and the fonts are the ones already on the phone, so a rural first
+     load waits on nothing. */
+  --faceDevanagari: 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', 'Kohinoor Devanagari', system-ui, sans-serif;
+  --faceLatin: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Devanagari', 'Nirmala UI', sans-serif;
+}
+
+html[data-ground='dawn'] {
+  --ground: #E7D2A8;
+  --ink: #2B2010;
+  --inkSoft: rgba(43, 32, 16, 0.62);
+  --inkFaint: rgba(43, 32, 16, 0.42);
+  --line: rgba(43, 32, 16, 0.20);
+  --edge: rgba(43, 32, 16, 0.30);
+  --border: rgba(43, 32, 16, 0.16);
+  --accent: #B0430F;
+  --onInk: #E7D2A8;
+}
+
+html[data-ground='dusk'] {
+  --ground: #1B1F2D;
+  --ink: #EDE7D9;
+  --inkSoft: #8E93A4;
+  --inkFaint: rgba(237, 231, 217, 0.42);
+  --line: rgba(237, 231, 217, 0.20);
+  --edge: rgba(237, 231, 217, 0.30);
+  --border: rgba(237, 231, 217, 0.16);
+  --accent: #D8903A;
+  --onInk: #1B1F2D;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--faceLatin);
+  /* Matras sit above and below the baseline and collide at anything tighter. */
+  line-height: 1.7;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html[data-locale='ne'] body { font-family: var(--faceDevanagari); }
+
+.devanagari { font-family: var(--faceDevanagari); }
+.latin { font-family: var(--faceLatin); }
+
+/* The whole screen is the button. It sits behind the content so the toggle and
+   the chip can be real buttons rather than nested ones. */
+.surface {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding: calc(22px + env(safe-area-inset-top)) 28px calc(20px + env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+
+.grow { flex: 1 1 0; min-height: 12px; }
+
+.top { display: flex; justify-content: flex-end; }
+
+.toggle {
+  display: flex;
+  /* 44px of tappable option plus the pill border: cold hands, dusty screen. */
+  height: 46px;
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.option {
+  min-width: 56px;
+  min-height: 44px;
+  padding: 0 15px;
+  border: 0;
+  background: transparent;
+  color: var(--inkSoft);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.option[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--onInk);
+  font-weight: 600;
+}
+
+.stage { flex: 0 0 auto; }
+
+.mark { color: var(--accent); display: block; }
+.mark.tick { color: var(--ink); }
+
+.action {
+  margin: 18px 0 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+html[data-locale='en'] .action {
+  font-size: 60px;
+  line-height: 1.08;
+  /* Latin only. Letter spacing breaks conjuncts and matra positioning. */
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin: 0;
+  color: var(--inkSoft);
+  font-size: 16px;
+}
+
+.wrap { max-width: 280px; padding-top: 14px; text-wrap: pretty; }
+
+#durationLine { font-size: 19px; }
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+
+.countdown {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0;
+  padding-top: 12px;
+  font-size: 80px;
+  font-weight: 600;
+  /* Digits carry no matras, so the display line height is set for the numeral
+     itself rather than for body copy. */
+  line-height: 1.3;
+}
+
+#remainingWord { font-size: 19px; font-weight: 400; }
+
+.stopRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding-top: 26px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.stopMark { width: 26px; height: 26px; border-radius: 3px; background: var(--accent); }
+
+.foot { display: flex; flex-direction: column; gap: 12px; }
+
+.hint { margin: 0; color: var(--inkFaint); font-size: 15px; }
+
+.ticks { position: relative; height: 18px; }
+
+.ticks > * { position: absolute; }
+
+.rail { left: 0; right: 0; top: 8px; height: 2px; background: var(--line); }
+
+.rail.spent { right: auto; width: 0; background: var(--ink); }
+
+.tickMark { top: 3px; width: 2px; height: 12px; background: var(--inkFaint); }
+
+.playhead { top: 0; width: 2px; height: 18px; background: var(--accent); }
+
+.meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+.chip {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.chip.chosen {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--onInk);
+  font-weight: 600;
+}
+
+.chip[disabled] {
+  border-color: transparent;
+  background: transparent;
+  color: var(--inkSoft);
+  font-weight: 400;
+  padding: 0;
+  pointer-events: none;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--inkSoft);
+  font-size: 16px;
+}
+
+/* The line above the day counter moves to the meta row once the volume
+   reminder is gone, so the footer keeps its rule in every state. */
+html:not([data-state='ready']) .meta { padding-top: 10px; border-top: 1px solid var(--border); }
+html:not([data-state='ready']) .volume { display: none; }
+html[data-state='playing'] .hint { display: none; }
+html[data-state='finished'] .hint { display: none; }
+
+/* A 390 by 844 viewport is the design target. Narrower phones lose the display
+   sizes first, since everything else is already at its minimum. */
+@media (max-height: 720px), (max-width: 340px) {
+  .action { font-size: 38px; }
+  html[data-locale='en'] .action { font-size: 46px; }
+  .countdown { font-size: 62px; }
+  .stopRow { padding-top: 18px; }
+}
