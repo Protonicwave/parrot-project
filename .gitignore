@@ -1,0 +1,16 @@
+# Generated audio. Reproducible from the seed recorded in the manifest, and too
+# large to be worth versioning. See README for the regeneration command.
+app/assets/tracks/*.mp3
+app/assets/tracks/*.wav
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
