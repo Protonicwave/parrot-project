@@ -11,7 +11,7 @@ document first and then builds.
 
 Repository: <https://github.com/Protonicwave/parrot-project>
 
-Status: specification frozen. No application code written yet.
+Status: specification frozen. Phases 0, 1 and 2 complete.
 
 ---
 
@@ -175,10 +175,12 @@ live bugs during design review.
 │           └── strings.js    Locale lookup and numeral substitution
 ├── generator/
 │   ├── dsp.py               Band limiting, envelopes, frequency tracks
+│   ├── sources.py           Xeno-canto search, download, cache and licence ledger
 │   ├── stimuli.py           The five stimulus voices
 │   ├── tracks.py            Event assembly and track layout
 │   ├── encode.py            WAV and MP3 output
 │   ├── cli.py               Argument parsing and entry point
+│   ├── recordings.json      The pinned source recordings and their attribution
 │   └── README.md
 ├── docs/
 │   ├── design/              Reference mockup and the earlier design directions
@@ -193,6 +195,14 @@ machine and numeral conversion are pure functions taking their inputs as
 arguments. The clock, storage, audio and DOM live behind thin wrappers in
 `platform/` and `ui/`. `main.js` is the only place they meet. This is what makes
 the logic testable without a browser, and it is the whole of the architecture.
+
+Amended in Phase 2: `sources.py` joins the generator because fetching and
+pinning third party recordings is a responsibility none of the other five
+modules owns, and mixing it into `stimuli.py` would put the network inside the
+signal path. The downloaded audio is cached outside version control, the same
+argument as generated audio. What is versioned is `recordings.json`, which pins
+every Xeno-canto identifier, recordist and licence, so the set is both
+reproducible and correctly attributed.
 
 Scalable here means clean seams, not layers. This is a one screen application.
 Adding a framework, a state container, a build step or a dependency injection
@@ -250,6 +260,17 @@ pull over a rural connection.
 digital silence, which VBR encodes at almost no cost while constant bitrate pays
 full price for it. Expect a four to eightfold reduction, bringing the set to
 somewhere between 5 and 12 MB. Measure the real figure and record it.
+
+Measured in Phase 2: 7.5 times, from 7.20 MB to 0.96 MB for the same track, at
+LAME VBR quality 5. The six tracks come to 5.75 MB against 43.2 MB at 64 kbps
+constant, so the set is a third of the lower end of the estimate. The silence
+assumption was conservative: the tracks are 96.4 per cent digital silence, which
+is why the saving beats the predicted range rather than landing inside it.
+
+The quality setting saturates. Anything from 2 upwards produces an identical
+file, because with no content above 5 kHz the encoder has nothing further to
+discard. Only quality 0 differs, and it is five times larger for no audible
+gain in a band that stops at 5 kHz.
 
 The audio is band limited to 5 kHz, so quality is unaffected by dropping the
 ceiling. Do not go below 22.05 kHz sampling.
@@ -371,10 +392,21 @@ on each other. They can run in either order, or in parallel.
   - Refactor the existing single file generator into the module layout in
     section 4 and add the spectral tests.
   - Switch to variable bitrate and record the real size reduction.
-  - Pull genuine rose-ringed parakeet alarm and distress calls, and genuine
-    shikra calls, from Xeno-canto. Keep licence and attribution for each.
+  - Pull genuine rose-ringed parakeet alarm and flock calls, and genuine shikra
+    calls, from Xeno-canto. Keep licence and attribution for each.
   - Rebuild the six tracks with real recordings as the payload, keeping the
     synthesised broadband bangs, which do not need to be species accurate.
+
+    Amended in Phase 2: the distress scream stays synthesised as well, because
+    Xeno-canto holds no distress recording for any parrot. The search returns
+    zero for `type:"distress call"` across the whole of Psittaciformes, not
+    merely for this species, which is what you would expect of an archive of
+    field recordings: a distress call means a bird in the hand. Recordings with
+    a NoDerivatives licence are also excluded throughout, since band limiting
+    and cutting a clip are plainly derivative. Both constraints narrow the
+    payload rather than the design, and the escalation in section 3.1 is
+    unchanged: the opener and the mobbing chorus are now real, and the two
+    stimuli that were always allowed to be approximations remain so.
   - Write the one page field guide in Nepali and English: do not plant beside the
     roost trees, choose hybrids with downward facing heads and long bracts, sow
     in step with neighbours to dilute the flock, site the speaker on the roost
@@ -441,11 +473,16 @@ should be filled here rather than improvised there.
 Neither blocks Phase 1.
 
 1. **Nepali verification.** Every Nepali string is unverified. Needs a native
-   speaker before any field use.
-2. **Listening test.** The synthesised calls have been checked spectrally but
-   never heard. Somebody needs to play a track and say whether the alarm reads as
-   a bird or as a synthesiser. If it reads as a synthesiser, Phase 2 fixes it
-   with real recordings anyway.
+   speaker before any field use. Phase 2 added
+   `docs/field-guide/nepali-verification.md`, which puts all 29 strings, the
+   interface and the field guide alike, in one sheet beside their intended
+   meaning. The check itself still needs a person.
+2. **Listening test.** The audio has been checked spectrally but never heard.
+   Phase 2 replaced the parakeet alarm, the flock chatter and the shikra with
+   real recordings, so the original form of this question is settled: those
+   three are birds because they are recordings of birds. What remains is whether
+   an assembled event reads as something happening, and whether the synthesised
+   distress scream sits convincingly beside the real calls.
 
 ## 9. Reference figures
 

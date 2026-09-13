@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunflower Guard field guide</title>
+<style>
+/* Owns the printed farmer note. Two sheets, one per language. */
+
+:root {
+  /* Devanagari must never fall back to a Latin only face: it renders as boxes
+     or as the wrong typeface. Both stacks end in a Devanagari capable family. */
+  --faceDevanagari: 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', 'Kohinoor Devanagari', system-ui, sans-serif;
+  --faceLatin: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Devanagari', 'Nirmala UI', sans-serif;
+  --ink: #2B2010;
+  --inkSoft: rgba(43, 32, 16, 0.66);
+  --line: rgba(43, 32, 16, 0.22);
+  --accent: #B0430F;
+  --ground: #F6EEDD;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #CFC4AC;
+  color: var(--ink);
+  font-family: var(--faceLatin);
+  /* Matras sit above and below the baseline and collide at anything tighter. */
+  line-height: 1.7;
+}
+
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 8mm auto;
+  padding: 16mm 16mm 12mm;
+  background: var(--ground);
+  box-shadow: 0 1mm 4mm rgba(0, 0, 0, 0.25);
+}
+
+.sheet[lang='ne'] { font-family: var(--faceDevanagari); }
+.sheet[lang='en'] { font-family: var(--faceLatin); }
+
+h1 {
+  margin: 0 0 1mm;
+  font-size: 30pt;
+  line-height: 1.3;
+  color: var(--accent);
+}
+
+.standfirst {
+  margin: 0 0 9mm;
+  font-size: 14pt;
+  color: var(--inkSoft);
+  border-bottom: 0.4mm solid var(--line);
+  padding-bottom: 4mm;
+}
+
+ol { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+
+li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 13mm 1fr;
+  gap: 4mm;
+  margin-bottom: 8mm;
+}
+
+li::before {
+  content: counter(step);
+  font-family: var(--faceLatin);
+  font-size: 20pt;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* Devanagari is never set below 16px, and letter spacing is Latin only:
+   it breaks conjuncts and matra positioning. */
+.what { font-size: 15pt; margin: 0; }
+.why { font-size: 12pt; color: var(--inkSoft); margin: 0.5mm 0 0; }
+
+.volume {
+  margin-top: 9mm;
+  padding: 6mm 5mm;
+  border: 0.6mm solid var(--accent);
+  font-size: 17pt;
+  text-align: center;
+}
+
+.facts {
+  margin-top: 9mm;
+  padding-top: 5mm;
+  border-top: 0.4mm solid var(--line);
+  font-size: 11.5pt;
+  color: var(--inkSoft);
+}
+
+.facts p { margin: 0 0 2.5mm; }
+
+.notice {
+  max-width: 210mm;
+  margin: 8mm auto 0;
+  padding: 4mm 6mm;
+  background: #7A2E12;
+  color: #F6EEDD;
+  font-family: var(--faceLatin);
+  font-size: 10pt;
+}
+
+@page { size: A4; margin: 0; }
+
+@media print {
+  body { background: none; }
+  .notice { display: none; }
+  .sheet {
+    margin: 0;
+    box-shadow: none;
+    break-after: page;
+  }
+  .sheet:last-of-type { break-after: auto; }
+}
+</style>
+</head>
+<body>
+
+<p class="notice">
+  The Nepali on the first sheet is unverified and was authored without a native
+  speaker. Have it checked before printing this for a farmer. This notice does
+  not print.
+</p>
+
+<section class="sheet" lang="ne">
+  <h1>सूर्यमुखीलाई सुगाबाट जोगाउने उपाय</h1>
+  <p class="standfirst">
+    दूधे अवस्थादेखि कटानीसम्मका ३ देखि ५ हप्ता मात्र जोखिमपूर्ण हुन्छन्।
+    आवाज पाँचमध्ये एक उपाय हो, पाँचै वटा सँगै प्रयोग गर्नुहोस्।
+  </p>
+
+  <ol>
+    <li>
+      <div>
+        <p class="what">सुगा बस्ने रूखहरूको छेउमा सूर्यमुखी नलगाउनुहोस्।</p>
+        <p class="why">बथान बिहान जहाँबाट उड्छ, त्यहीँ नजिकको खेत पहिले खाइन्छ।</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">तल फर्केको टाउको र लामो पत्र भएका जात छान्नुहोस्।</p>
+        <p class="why">निहुरिएको टाउकोमा सुगालाई बस्न ठाउँ हुँदैन।</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">छिमेकीहरूसँग एकै समयमा रोप्नुहोस्।</p>
+        <p class="why">सबैको बाली सँगै पाक्दा बथान फैलिन्छ र एउटै खेतमा क्षति थुप्रिँदैन।</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">स्पिकर खेतको छेउमा, सुगा बस्ने रूखतर्फ फर्काएर राख्नुहोस्।</p>
+        <p class="why">क्षति खेतको छेउको ५० मिटरभित्र थुप्रिन्छ, बीचमा प्रायः हुँदैन।</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">बिहान र साँझमा सबैभन्दा प्रभावकारी</p>
+        <p class="why">बथान बिहान र साँझ खेततिर आउँछ।</p>
+      </div>
+    </li>
+  </ol>
+
+  <p class="volume">स्पिकरको आवाज पूरा बढाउनुहोस्</p>
+
+  <div class="facts">
+    <p>सुगाले सूर्यमुखीको २० देखि ५० प्रतिशत बाली खान सक्छ।</p>
+    <p>आवाजले मात्र करिब आधा क्षति घटाउँछ, त्यसैले अरू उपाय पनि चाहिन्छ।</p>
+  </div>
+</section>
+
+<section class="sheet" lang="en">
+  <h1>Protecting sunflowers from parakeets</h1>
+  <p class="standfirst">
+    Only the three to five weeks from milk stage to harvest are at risk. Sound
+    is one of these five measures. Use all five together.
+  </p>
+
+  <ol>
+    <li>
+      <div>
+        <p class="what">Do not plant beside the trees the parakeets roost in.</p>
+        <p class="why">The field nearest where the flock wakes is the field eaten first.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">Choose hybrids with downward facing heads and long bracts.</p>
+        <p class="why">A head that hangs down gives a parakeet nowhere to perch.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">Sow in step with your neighbours.</p>
+        <p class="why">When everyone ripens together the flock spreads out instead of concentrating on one field.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">Put the speaker on the margin, facing the roost.</p>
+        <p class="why">Damage concentrates within 50 m of the edge and is close to zero in the middle.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p class="what">Works best at dawn and dusk.</p>
+        <p class="why">That is when the flock moves between the roost and the fields.</p>
+      </div>
+    </li>
+  </ol>
+
+  <p class="volume">Keep the speaker at full volume</p>
+
+  <div class="facts">
+    <p>Parakeets take 20 to 50 per cent of a sunflower crop, more where the flocks are large.</p>
+    <p>Sound alone cuts damage by roughly half, so the other four measures still matter.</p>
+  </div>
+</section>
+
+</body>
+</html>

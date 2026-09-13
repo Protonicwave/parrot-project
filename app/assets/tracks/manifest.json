@@ -1,59 +1,43 @@
 {
-  "generated": "2026-09-13T12:19:20",
+  "generated": "2026-09-13T14:07:53",
   "seed": 1337,
   "sample_rate": 22050,
   "minutes_per_track": 15.0,
   "tracks": [
     {
       "file": "track_01.mp3",
-      "events": 7,
-      "size_mb": 7.2,
+      "events": 6,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 27.32,
-          "duration": 4.35,
+          "duration": 8.51,
           "stimuli": [
             "alarm",
-            "distress"
-          ]
-        },
-        {
-          "at_seconds": 151.63,
-          "duration": 5.87,
-          "stimuli": [
-            "alarm",
-            "shikra",
+            "distress",
             "bang"
           ]
         },
         {
-          "at_seconds": 294.4,
-          "duration": 9.04,
+          "at_seconds": 124.96,
+          "duration": 6.21,
           "stimuli": [
             "alarm",
-            "shikra",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 324.17,
+          "duration": 7.35,
+          "stimuli": [
+            "alarm",
+            "distress",
             "bang"
           ]
         },
         {
-          "at_seconds": 445.47,
-          "duration": 4.3,
-          "stimuli": [
-            "alarm",
-            "chatter"
-          ]
-        },
-        {
-          "at_seconds": 530.14,
-          "duration": 4.36,
-          "stimuli": [
-            "alarm",
-            "chatter"
-          ]
-        },
-        {
-          "at_seconds": 626.71,
-          "duration": 5.33,
+          "at_seconds": 507.94,
+          "duration": 7.7,
           "stimuli": [
             "chatter",
             "alarm",
@@ -61,69 +45,86 @@
           ]
         },
         {
-          "at_seconds": 731.6,
-          "duration": 5.59,
+          "at_seconds": 704.2,
+          "duration": 5.49,
+          "stimuli": [
+            "chatter",
+            "alarm",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 795.07,
+          "duration": 6.46,
           "stimuli": [
             "alarm",
-            "distress"
+            "shikra",
+            "bang"
           ]
         }
       ]
     },
     {
       "file": "track_02.mp3",
-      "events": 6,
-      "size_mb": 7.2,
+      "events": 7,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 9.15,
-          "duration": 7.44,
+          "duration": 4.4,
+          "stimuli": [
+            "shikra",
+            "alarm"
+          ]
+        },
+        {
+          "at_seconds": 115.73,
+          "duration": 7.14,
+          "stimuli": [
+            "chatter",
+            "distress",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 322.03,
+          "duration": 5.62,
           "stimuli": [
             "shikra",
             "distress"
           ]
         },
         {
-          "at_seconds": 206.67,
-          "duration": 6.3,
+          "at_seconds": 430.63,
+          "duration": 6.12,
           "stimuli": [
-            "alarm",
+            "chatter",
             "distress",
             "bang"
           ]
         },
         {
-          "at_seconds": 348.95,
-          "duration": 6.04,
-          "stimuli": [
-            "shikra",
-            "alarm",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 523.72,
-          "duration": 5.46,
+          "at_seconds": 557.14,
+          "duration": 5.55,
           "stimuli": [
             "alarm",
             "shikra"
           ]
         },
         {
-          "at_seconds": 665.63,
-          "duration": 8.88,
+          "at_seconds": 662.7,
+          "duration": 5.02,
           "stimuli": [
-            "shikra",
-            "distress",
-            "bang"
+            "chatter",
+            "alarm"
           ]
         },
         {
-          "at_seconds": 873.32,
-          "duration": 7.02,
+          "at_seconds": 814.15,
+          "duration": 7.23,
           "stimuli": [
             "alarm",
-            "distress",
+            "shikra",
             "bang"
           ]
         }
@@ -132,121 +133,113 @@
     {
       "file": "track_03.mp3",
       "events": 6,
-      "size_mb": 7.2,
+      "size_mb": 0.95,
       "log": [
         {
           "at_seconds": 10.95,
-          "duration": 7.56,
-          "stimuli": [
-            "chatter",
-            "shikra",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 155.41,
-          "duration": 6.72,
-          "stimuli": [
-            "shikra",
-            "alarm",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 355.31,
-          "duration": 3.0,
+          "duration": 4.61,
           "stimuli": [
             "chatter",
             "alarm"
           ]
         },
         {
-          "at_seconds": 526.07,
-          "duration": 3.83,
+          "at_seconds": 161.86,
+          "duration": 4.85,
+          "stimuli": [
+            "alarm",
+            "chatter"
+          ]
+        },
+        {
+          "at_seconds": 295.94,
+          "duration": 6.33,
+          "stimuli": [
+            "alarm",
+            "shikra",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 407.88,
+          "duration": 5.95,
           "stimuli": [
             "alarm",
             "distress"
           ]
         },
         {
-          "at_seconds": 693.24,
-          "duration": 8.33,
+          "at_seconds": 607.54,
+          "duration": 7.38,
           "stimuli": [
-            "shikra",
-            "chatter"
+            "chatter",
+            "alarm",
+            "bang"
           ]
         },
         {
-          "at_seconds": 837.88,
-          "duration": 6.25,
+          "at_seconds": 785.81,
+          "duration": 5.93,
           "stimuli": [
-            "shikra",
-            "chatter"
+            "chatter",
+            "shikra"
           ]
         }
       ]
     },
     {
       "file": "track_04.mp3",
-      "events": 7,
-      "size_mb": 7.2,
+      "events": 6,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 23.68,
-          "duration": 7.05,
+          "duration": 6.37,
           "stimuli": [
             "shikra",
-            "alarm"
-          ]
-        },
-        {
-          "at_seconds": 173.07,
-          "duration": 7.82,
-          "stimuli": [
-            "shikra",
-            "chatter",
+            "distress",
             "bang"
           ]
         },
         {
-          "at_seconds": 317.46,
-          "duration": 4.69,
+          "at_seconds": 188.71,
+          "duration": 6.64,
           "stimuli": [
             "alarm",
-            "shikra"
-          ]
-        },
-        {
-          "at_seconds": 474.81,
-          "duration": 5.41,
-          "stimuli": [
-            "chatter",
-            "shikra"
-          ]
-        },
-        {
-          "at_seconds": 561.82,
-          "duration": 5.1,
-          "stimuli": [
-            "shikra",
             "distress"
           ]
         },
         {
-          "at_seconds": 730.97,
-          "duration": 4.54,
+          "at_seconds": 355.62,
+          "duration": 5.85,
           "stimuli": [
             "alarm",
-            "chatter",
+            "chatter"
+          ]
+        },
+        {
+          "at_seconds": 528.5,
+          "duration": 7.69,
+          "stimuli": [
+            "shikra",
+            "alarm",
             "bang"
           ]
         },
         {
-          "at_seconds": 826.6,
-          "duration": 5.65,
+          "at_seconds": 677.92,
+          "duration": 5.42,
           "stimuli": [
             "alarm",
-            "distress",
+            "shikra"
+          ]
+        },
+        {
+          "at_seconds": 814.16,
+          "duration": 5.08,
+          "stimuli": [
+            "chatter",
+            "shikra",
             "bang"
           ]
         }
@@ -254,67 +247,59 @@
     },
     {
       "file": "track_05.mp3",
-      "events": 7,
-      "size_mb": 7.2,
+      "events": 6,
+      "size_mb": 0.95,
       "log": [
         {
           "at_seconds": 14.2,
-          "duration": 5.97,
+          "duration": 5.58,
           "stimuli": [
             "chatter",
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 124.61,
+          "duration": 6.23,
+          "stimuli": [
+            "shikra",
             "alarm",
             "bang"
           ]
         },
         {
-          "at_seconds": 103.08,
-          "duration": 6.93,
+          "at_seconds": 256.49,
+          "duration": 6.21,
           "stimuli": [
-            "chatter",
+            "shikra",
             "distress",
             "bang"
           ]
         },
         {
-          "at_seconds": 232.66,
-          "duration": 5.07,
+          "at_seconds": 413.37,
+          "duration": 5.98,
           "stimuli": [
-            "chatter",
-            "alarm"
-          ]
-        },
-        {
-          "at_seconds": 321.47,
-          "duration": 5.28,
-          "stimuli": [
-            "chatter",
-            "shikra"
-          ]
-        },
-        {
-          "at_seconds": 468.04,
-          "duration": 7.46,
-          "stimuli": [
-            "alarm",
             "shikra",
-            "bang"
-          ]
-        },
-        {
-          "at_seconds": 668.61,
-          "duration": 4.58,
-          "stimuli": [
-            "alarm",
             "chatter",
             "bang"
           ]
         },
         {
-          "at_seconds": 784.5,
-          "duration": 5.26,
+          "at_seconds": 571.01,
+          "duration": 5.49,
           "stimuli": [
             "shikra",
-            "alarm"
+            "distress"
+          ]
+        },
+        {
+          "at_seconds": 741.0,
+          "duration": 7.38,
+          "stimuli": [
+            "chatter",
+            "distress",
+            "bang"
           ]
         }
       ]
@@ -322,27 +307,19 @@
     {
       "file": "track_06.mp3",
       "events": 7,
-      "size_mb": 7.2,
+      "size_mb": 0.96,
       "log": [
         {
           "at_seconds": 14.29,
-          "duration": 4.45,
+          "duration": 4.94,
           "stimuli": [
             "chatter",
             "alarm"
           ]
         },
         {
-          "at_seconds": 137.62,
-          "duration": 5.65,
-          "stimuli": [
-            "chatter",
-            "shikra"
-          ]
-        },
-        {
-          "at_seconds": 258.47,
-          "duration": 6.42,
+          "at_seconds": 185.55,
+          "duration": 6.69,
           "stimuli": [
             "alarm",
             "shikra",
@@ -350,39 +327,339 @@
           ]
         },
         {
-          "at_seconds": 353.7,
-          "duration": 5.29,
+          "at_seconds": 368.83,
+          "duration": 5.96,
           "stimuli": [
+            "shikra",
             "alarm",
-            "distress",
             "bang"
           ]
         },
         {
-          "at_seconds": 535.77,
-          "duration": 6.52,
+          "at_seconds": 547.66,
+          "duration": 5.53,
           "stimuli": [
+            "alarm",
             "chatter",
+            "bang"
+          ]
+        },
+        {
+          "at_seconds": 647.92,
+          "duration": 5.58,
+          "stimuli": [
+            "alarm",
             "shikra",
             "bang"
           ]
         },
         {
-          "at_seconds": 712.21,
-          "duration": 5.79,
+          "at_seconds": 750.17,
+          "duration": 5.46,
           "stimuli": [
             "chatter",
             "shikra"
           ]
         },
         {
-          "at_seconds": 846.68,
-          "duration": 4.34,
+          "at_seconds": 850.51,
+          "duration": 5.34,
           "stimuli": [
             "alarm",
-            "distress"
+            "shikra"
           ]
         }
+      ]
+    }
+  ],
+  "recordings": [
+    {
+      "id": "XC475256",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Stanislas Wroza",
+      "country": "France",
+      "type": "alarm call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/475256",
+      "role": "alarm",
+      "band_fraction": 0.965,
+      "centroid_hz": [
+        3238,
+        3272
+      ]
+    },
+    {
+      "id": "XC475257",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Stanislas Wroza",
+      "country": "France",
+      "type": "alarm call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/475257",
+      "role": "alarm",
+      "band_fraction": 0.946,
+      "centroid_hz": [
+        3116,
+        3172
+      ]
+    },
+    {
+      "id": "XC694154",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Eduardo Realinho",
+      "country": "Portugal",
+      "type": "alarm call, call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/694154",
+      "role": "alarm",
+      "band_fraction": 0.983,
+      "centroid_hz": [
+        3355,
+        3378
+      ]
+    },
+    {
+      "id": "XC694156",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Eduardo Realinho",
+      "country": "Portugal",
+      "type": "alarm call, call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/694156",
+      "role": "alarm",
+      "band_fraction": 0.977,
+      "centroid_hz": [
+        3130,
+        3231
+      ]
+    },
+    {
+      "id": "XC855824",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Martin Billard",
+      "country": "France",
+      "type": "alarm call, call, flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/855824",
+      "role": "alarm",
+      "band_fraction": 0.806,
+      "centroid_hz": [
+        3296,
+        3437
+      ]
+    },
+    {
+      "id": "XC855829",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Martin Billard",
+      "country": "France",
+      "type": "alarm call, call, flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/855829",
+      "role": "alarm",
+      "band_fraction": 0.931,
+      "centroid_hz": [
+        2952,
+        3181
+      ]
+    },
+    {
+      "id": "XC207014",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Rajgopal Patil",
+      "country": "India",
+      "type": "call, flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/207014",
+      "role": "chatter",
+      "band_fraction": 0.876,
+      "centroid_hz": [
+        3514,
+        3745
+      ]
+    },
+    {
+      "id": "XC612032",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Samiul Mohsanin",
+      "country": "Bangladesh",
+      "type": "flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/612032",
+      "role": "chatter",
+      "band_fraction": 0.82,
+      "centroid_hz": [
+        3131,
+        3601
+      ]
+    },
+    {
+      "id": "XC680468",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "Jelle Scharringa",
+      "country": "India",
+      "type": "call, flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/680468",
+      "role": "chatter",
+      "band_fraction": 0.849,
+      "centroid_hz": [
+        3440,
+        3458
+      ]
+    },
+    {
+      "id": "XC979930",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "David Darrell-Lambert",
+      "country": "India",
+      "type": "flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/979930",
+      "role": "chatter",
+      "band_fraction": 0.845,
+      "centroid_hz": [
+        3117,
+        3265
+      ]
+    },
+    {
+      "id": "XC979932",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "David Darrell-Lambert",
+      "country": "India",
+      "type": "flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/979932",
+      "role": "chatter",
+      "band_fraction": 0.872,
+      "centroid_hz": [
+        3534,
+        3639
+      ]
+    },
+    {
+      "id": "XC980121",
+      "species": "Psittacula krameri",
+      "english": "Rose-ringed Parakeet",
+      "recordist": "David Darrell-Lambert",
+      "country": "India",
+      "type": "flight call",
+      "quality": "A",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/980121",
+      "role": "chatter",
+      "band_fraction": 0.814,
+      "centroid_hz": [
+        3477,
+        3503
+      ]
+    },
+    {
+      "id": "XC141625",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Sagar Chandane",
+      "country": "India",
+      "type": "call",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "url": "https://xeno-canto.org/141625",
+      "role": "shikra",
+      "band_fraction": 0.95,
+      "centroid_hz": [
+        3451,
+        3620
+      ]
+    },
+    {
+      "id": "XC206429",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Sushant more",
+      "country": "India",
+      "type": "call",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/206429",
+      "role": "shikra",
+      "band_fraction": 0.804,
+      "centroid_hz": [
+        3090,
+        3399
+      ]
+    },
+    {
+      "id": "XC215626",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Krishna Khan",
+      "country": "India",
+      "type": "call",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/215626",
+      "role": "shikra",
+      "band_fraction": 0.891,
+      "centroid_hz": [
+        3361,
+        3466
+      ]
+    },
+    {
+      "id": "XC296421",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Vivek Puliyeri",
+      "country": "India",
+      "type": "call",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/296421",
+      "role": "shikra",
+      "band_fraction": 0.758,
+      "centroid_hz": [
+        3190,
+        3865
+      ]
+    },
+    {
+      "id": "XC341470",
+      "species": "Accipiter badius",
+      "english": "Shikra",
+      "recordist": "Pushpa Ausekar",
+      "country": "India",
+      "type": "call",
+      "quality": "B",
+      "licence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "url": "https://xeno-canto.org/341470",
+      "role": "shikra",
+      "band_fraction": 0.896,
+      "centroid_hz": [
+        3538,
+        3894
       ]
     }
   ]
