@@ -27,3 +27,12 @@ the ShareAlike terms apply to the tracks as well.
 
 The broadband bangs and the distress scream are synthesised and
 carry no third party rights.
+
+## Licence of the tracks
+
+The tracks are adaptations of the recordings above, so ShareAlike
+carries over: they are published under
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Use them, change them and pass them on, but not commercially, credit
+the recordists listed here, and keep the same licence on anything
+derived from them.
