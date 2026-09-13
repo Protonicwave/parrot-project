@@ -44,6 +44,12 @@ def decoded(manifest):
     return audio
 
 
+def scare_tracks(manifest):
+    """The six the product has always had. A rest track carries a single event,
+    so the assertions about scatter and count do not apply to it."""
+    return [entry for entry in manifest["tracks"] if entry.get("kind", "scare") == "scare"]
+
+
 def _event_windows(entry, samples, slack=0.0):
     for event in entry["log"]:
         start = max(0, dsp.samples(event["at_seconds"] - slack))
@@ -101,7 +107,7 @@ def test_events_sit_in_the_working_band(manifest, decoded):
 
 def test_event_count_matches_the_plan(manifest):
     """Roughly seven scares per track. Far fewer stops working, far more habituates."""
-    for entry in manifest["tracks"]:
+    for entry in scare_tracks(manifest):
         assert 5 <= entry["events"] <= 9, (
             "%s has %d events" % (entry["file"], entry["events"]))
         assert entry["events"] == len(entry["log"])
@@ -115,7 +121,7 @@ def test_gaps_are_irregular(manifest):
     within a second of each other across a quarter of an hour is chance, and a
     bird cannot use it.
     """
-    for entry in manifest["tracks"]:
+    for entry in scare_tracks(manifest):
         starts = [event["at_seconds"] for event in entry["log"]]
         gaps = np.diff(starts)
         assert gaps.min() > 60.0, "%s has a gap of only %.0fs" % (entry["file"], gaps.min())
@@ -138,3 +144,56 @@ def test_every_recording_is_credited(manifest):
             assert entry.get(field), "%s missing %s" % (entry.get("id"), field)
         assert "-nd" not in entry["licence"], (
             "%s is NoDerivatives and cannot be cut or filtered" % entry["id"])
+
+
+def test_declared_duration_matches_the_manifest(manifest, decoded):
+    """
+    Phase 2 shipped tracks whose container claimed seventeen and a half minutes
+    for fifteen minutes of audio, and every test passed, because the application
+    reads length from the manifest and never asked the file. One assertion that
+    decodes each track closes that whole class.
+    """
+    wanted = manifest["minutes_per_track"] * 60
+    for entry in manifest["tracks"]:
+        seconds = len(decoded[entry["file"]]) / dsp.SAMPLE_RATE
+        assert abs(seconds - wanted) < 1.0, (
+            "%s decodes to %.1fs against a declared %.1fs"
+            % (entry["file"], seconds, wanted))
+
+
+def test_every_track_says_what_kind_it_is(manifest):
+    """Section 4.1 of PLAN.md. One word per track, and the whole of what Phase 3 added."""
+    for entry in manifest["tracks"]:
+        assert entry["kind"] in ("scare", "rest"), (
+            "%s has kind %r" % (entry["file"], entry.get("kind")))
+
+
+def test_rest_tracks_carry_exactly_one_event(manifest):
+    """A rest track is the same fifteen minutes with a single event in it."""
+    rests = [entry for entry in manifest["tracks"] if entry["kind"] == "rest"]
+    assert len(rests) >= 2, "one rest track makes a thinned out stretch predictable"
+    for entry in rests:
+        assert entry["events"] == 1, "%s has %d events" % (entry["file"], entry["events"])
+        assert len(entry["log"]) == 1
+
+
+def test_events_are_not_all_at_the_same_level(manifest, decoded):
+    """
+    Every event used to arrive at the same loudness, so every alarm sounded like
+    it was at the same distance. Real flocks are not.
+    """
+    peaks = []
+    for entry in scare_tracks(manifest):
+        track = decoded[entry["file"]]
+        for _, start, end in _event_windows(entry, len(track)):
+            peaks.append(float(np.abs(track[start:end]).max()))
+    assert min(peaks) < 0.75 * max(peaks), (
+        "event peaks span only %.2f to %.2f" % (min(peaks), max(peaks)))
+
+
+def test_some_alarms_come_to_nothing(manifest):
+    """Roughly one event in five is a single call that does not escalate, as real ones do."""
+    counts = [len(event["stimuli"]) for entry in manifest["tracks"] for event in entry["log"]]
+    lone = sum(1 for count in counts if count == 1)
+    assert lone > 0, "every event escalates, so the escalation carries no information"
+    assert lone < len(counts) / 2, "%d of %d events are a single call" % (lone, len(counts))
